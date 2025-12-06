@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - SI FINTECH LTD</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =======================================
+           Global/Design Variables (Updated Professional Palette)
+           ======================================= */
+        :root {
+            --primary-blue: #0078D4;
+            /* Deep HP/Microsoft Blue (Action, Focus) - KEEPING HEADER COLORS */
+            --secondary-navy: #0B2B4A;
+            /* Dark Navy (Headings, Footer, Authority) - KEEPING HEADER COLORS */
+            --accent-sky: #2FB8FF;
+            /* Bright Sky Blue (Hover, Highlight) - KEEPING HEADER COLORS */
+            --accent-red: #e63946; /* Added for support link consistency */
+
+            /* NEW PROFESSIONAL COLOR SYSTEM */
+            --corporate-gray-900: #1a202c;
+            /* Dark charcoal for headings */
+            --corporate-gray-700: #2d3748;
+            /* Medium charcoal for subheadings */
+            --corporate-gray-500: #718096;
+            /* Medium gray for body text */
+            --corporate-gray-300: #e2e8f0;
+            /* Light gray for backgrounds */
+            --corporate-gray-100: #f7fafc;
+            /* Very light gray for card backgrounds */
+
+            --accent-slate: #4a5568;
+            /* Slate for borders and subtle elements */
+            --accent-teal: #319795;
+            /* Professional teal for highlights */
+            --accent-indigo: #5a67d8;
+            /* Professional indigo for CTAs */
+            --accent-amber: #d69e2e;
+            /* Warm amber for accents */
+
+            --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.03);
+            --shadow-card: 0 8px 15px rgba(0, 0, 0, 0.05);
+            --shadow-elevated: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --header-gradient: linear-gradient(45deg, #121521, #38476b, #b6192e, #ffc1ac);
+            /* KEEPING HEADER GRADIENT */
+        }
+
+        /* Base and Layout Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--corporate-gray-700);
+            line-height: 1.6;
+            background: var(--corporate-gray-100);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-container {
+            flex-grow: 1;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-indigo);
+            transition: color 0.2s;
+        }
+
+        /* ---------------------------------------
+           Header and Navigation (Updated for consistency)
+           --------------------------------------- */
+        header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 15px 25px; /* Reduced padding for compact look */
+            border-bottom: 4px solid var(--secondary-navy);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 55px; /* Reduced logo size */
+            margin-top: 0;
+            width: auto;
+        }
+
+        .header-content h1 {
+            font-size: 1.5rem; /* Reduced font size for consistency */
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.8px; /* Reduced letter spacing */
+            text-transform: uppercase;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-end;
+            font-size: 0.85rem; /* Reduced font size */
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            transition: color 0.2s;
+        }
+
+        .contact-info a {
+            color:inherit;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .contact-info i {
+            font-size: 1.1rem;
+            color: var(--accent-sky);
+        }
+
+        .contact-info:hover {
+            color: var(--primary-blue);
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        nav a {
+            padding: 12px 0; /* Reduced padding */
+            font-size: 1rem; /* Reduced font size */
+            color: var(--corporate-gray-700);
+            font-weight: 500;
+            transition: color 0.2s, border-bottom 0.2s;
+            border-bottom: 3px solid transparent; /* Reduced border thickness */
+        }
+
+        nav a:hover {
+            color: var(--accent-indigo);
+            border-bottom-color: var(--accent-indigo);
+        }
+
+        nav a.active {
+            color: var(--accent-indigo);
+            border-bottom-color: var(--accent-indigo);
+            font-weight: 600;
+        }
+
+        .support-link {
+            margin-left: auto;
+            background: var(--accent-red);
+            padding: 8px 15px !important;
+            border-radius: 6px;
+            border-bottom: none !important;
+            font-weight: 600;
+            align-self: center; /* Align with nav links */
+            color: white !important;
+        }
+
+        .support-link:hover {
+            background: #c1121f;
+            color: white !important;
+            transform: translateY(-1px);
+        }
+
+        /* ---------------------------------------
+           Floating Support & Back to Top (Added)
+           --------------------------------------- */
+           .floating-support {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .support-icon-float {
+            border: none;
+            width: 55px;
+            height: 55px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .support-icon-float:hover {
+            transform: scale(1.05);
+        }
+
+        .support-options {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 160px;
+        }
+
+        .floating-support.active .support-options {
+            display: flex;
+        }
+
+        .support-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            border-radius: 4px;
+            color: var(--secondary-navy);
+            font-weight: 500;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .support-option:hover {
+            background: var(--corporate-gray-300);
+        }
+
+        .support-option i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            bottom: 90px;
+        }
+
+        .floating-support.active + .back-to-top.visible {
+            bottom: 200px;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-navy);
+            transform: translateY(-2px);
+        }
+
+
+        /* ---------------------------------------
+           Hero Banner (Services Page Specific)
+           --------------------------------------- */
+        .services-hero {
+            background: linear-gradient(135deg, var(--accent-indigo) 0%, var(--corporate-gray-900) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .services-hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .services-hero p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            font-weight: 300;
+            position: relative;
+        }
+
+        /* ---------------------------------------
+           Core Services Section
+           --------------------------------------- */
+
+        .core-services {
+            padding-bottom: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h3 {
+            font-size: 2.5rem;
+            color: var(--corporate-gray-900);
+            position: relative;
+            font-weight: 700;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h3::after {
+            content: "";
+            display: block;
+            height: 4px;
+            width: 80px;
+            background: var(--accent-indigo);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .service-grid-main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card-main {
+            background: var(--corporate-gray-100);
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            padding: 40px 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 5px solid var(--accent-indigo);
+            border: 1px solid var(--corporate-gray-300);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card-main::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-indigo);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card-main:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card-main:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .service-icon-main {
+            font-size: 3rem;
+            color: var(--accent-indigo);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card-main:hover .service-icon-main {
+            transform: scale(1.1);
+        }
+
+        .service-card-main h4 {
+            font-size: 1.5rem;
+            color: var(--corporate-gray-900);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .service-card-main p {
+            color: var(--corporate-gray-500);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* ---------------------------------------
+           Value Proposition Grid
+           --------------------------------------- */
+        .value-propositions {
+            background: var(--corporate-gray-100);
+            padding: 40px 0;
+            margin-bottom: 40px;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow-subtle);
+            border-left: 4px solid var(--accent-indigo);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .value-item i {
+            font-size: 1.5rem;
+            color: var(--accent-indigo);
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+
+        .value-item h5 {
+            font-size: 1.1rem;
+            color: var(--corporate-gray-900);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .value-item p {
+            color: var(--corporate-gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* ---------------------------------------
+           Service Process Section (NEW)
+           --------------------------------------- */
+        .service-process {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: "";
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: var(--corporate-gray-300);
+            z-index: 1;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            flex: 1;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-indigo);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 15px;
+            box-shadow: 0 4px 10px rgba(90, 103, 216, 0.3);
+        }
+
+        .step-content h4 {
+            font-size: 1.2rem;
+            color: var(--corporate-gray-900);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .step-content p {
+            color: var(--corporate-gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* ---------------------------------------
+           Service Comparison Table (NEW)
+           --------------------------------------- */
+        .service-comparison {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .comparison-table th {
+            background: var(--corporate-gray-100);
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--corporate-gray-900);
+            border-bottom: 2px solid var(--corporate-gray-300);
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid var(--corporate-gray-300);
+            color: var(--corporate-gray-700);
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table .check {
+            color: var(--accent-teal);
+            font-weight: 600;
+        }
+
+        .comparison-table .cross {
+            color: #e53e3e;
+            font-weight: 600;
+        }
+
+        /* ---------------------------------------
+           Managed Service Details (The most unique offering)
+           --------------------------------------- */
+        .managed-service-details {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: var(--shadow-card);
+            border-left: 5px solid var(--accent-indigo);
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .managed-service-details h3 {
+            font-size: 2rem;
+            color: var(--accent-indigo);
+            margin-bottom: 25px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--corporate-gray-300);
+            padding-bottom: 10px;
+        }
+
+        .managed-service-details .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            text-align: left;
+        }
+
+        .feature-point {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: var(--corporate-gray-10);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-point:hover {
+            transform: translateY(-3px);
+        }
+
+        .feature-point i {
+            font-size: 1.5rem;
+            color: rgb(13, 145, 13);
+        }
+
+        .feature-point div strong {
+            color: var(--corporate-gray-900);
+            display: block;
+            font-size: 1rem;
+        }
+
+        .feature-point div p {
+            color: var(--corporate-gray-500);
+            font-size: 0.85rem;
+            margin: 0;
+        }
+
+        /* ---------------------------------------
+           Client Success Metrics (NEW)
+           --------------------------------------- */
+        .success-metrics {
+            background: linear-gradient(135deg, var(--corporate-gray-900) 0%, var(--accent-slate) 100%);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .metric-item {
+            padding: 20px;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-teal);
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Brochure Download Section */
+        .brochure-download {
+            background: var(--accent-indigo);
+            color: white;
+            padding: 30px 25px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 40px 0;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brochure-download::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+        }
+
+        .brochure-download h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .brochure-download p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+
+        .brochure-download .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--corporate-gray-900);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        .brochure-download .btn-download i {
+            font-size: 1.1rem;
+        }
+
+        .brochure-download .btn-download:hover {
+            background: var(--corporate-gray-700);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ---------------------------------------
+           CTA Banner (Consistent style)
+           --------------------------------------- */
+        .cta-banner {
+            background: linear-gradient(90deg, var(--corporate-gray-900), var(--accent-slate));
+            color: #fff;
+            padding: 50px 25px;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 0;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--accent-indigo);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+
+        .cta-banner h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--accent-teal);
+            position: relative;
+        }
+
+        .cta-banner p {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .cta-banner a {
+            display: inline-block;
+            background: var(--accent-indigo);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(90, 103, 216, 0.3);
+            position: relative;
+        }
+
+        .cta-banner a:hover {
+            background: var(--accent-teal);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(49, 151, 149, 0.4);
+        }
+
+        /* ---------------------------------------
+           Footer (Updated with new color system)
+           --------------------------------------- */
+        .main-footer {
+            background: var(--corporate-gray-900);
+            color: #aebecd;
+            padding: 60px 20px 0;
+            font-size: 0.95rem;
+            border-top: 4px solid var(--accent-indigo);
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-column h4 {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-indigo);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .footer-column p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a,
+        .footer-contact a {
+            color: #aebecd;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover,
+        .footer-contact a:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-contact i {
+            color: var(--accent-indigo);
+            margin-right: 10px;
+            width: 15px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-teal);
+        }
+
+        .btn-footer-cta {
+            display: inline-block;
+            background-color: var(--accent-indigo);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn-footer-cta:hover {
+            background-color: var(--accent-teal);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 20px;
+            font-size: 0.85rem;
+            color: #889aad;
+        }
+
+        /* ---------------------------------------
+           Responsive Design
+           --------------------------------------- */
+        @media (max-width: 1200px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .service-grid-main {
+                grid-template-columns: 1fr;
+            }
+
+            .managed-service-details .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-content h1 {
+                font-size: 1.7rem;
+            }
+
+            .header-contact {
+                width: 100%;
+                align-items: flex-start;
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .logo img {
+                height: 50px;
+                margin-top: 0;
+            }
+
+            .services-hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .services-hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h3 {
+                font-size: 2rem;
+            }
+
+            .service-card-main {
+                padding: 30px 20px;
+            }
+
+            .service-card-main h4 {
+                font-size: 1.3rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-col h4 {
+                margin: 0 auto 20px;
+            }
+
+            .footer-contact-item {
+                justify-content: center;
+            }
+
+            .social-icons {
+                text-align: center;
+            }
+
+            .brochure-download .btn-download {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="SI FINTECH LTD Logo Design.png" alt="SI Fintech Logo">
+                </div>
+                <h1>SI FINTECH PVT LTD</h1>
+            </div>
+            <div class="header-contact">
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919876543210">Sales: +91 98765 43210</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-headset"></i>
+                    <a href="tel:+919988776655">Support: +91 99887 76655</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:alok@logicalhub.com">alok@logicalhub.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="unique.html">Why Choose Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="support.html" class="support-link"><i class="fas fa-headset"></i> Support</a>
+        </div>
+    </nav>
+
+    <div class="page-container">
+
+        <section class="services-hero">
+            <h2>Comprehensive Printing Solutions</h2>
+            <p>From proactive managed services (ValuPrint) to expert repairs and guaranteed supplies, we are your single
+                point of contact for all printing needs.</p>
+        </section>
+
+        <section class="core-services">
+            <div class="section-title">
+                <h3>Our Core Service Offerings</h3>
+            </div>
+
+            <div class="service-grid-main">
+
+                <div class="service-card-main">
+                    <div class="service-icon-main"><i class="fas fa-tools"></i></div>
+                    <h4>Managed Printing Services (ValuPrint)</h4>
+                    <p>Our flagship offering to completely manage your printing fleet. We handle everything from
+                        proactive maintenance and supply restocking to performance monitoring, guaranteeing maximum
+                        uptime and predictable costs (Cost Per Print model).</p>
+                </div>
+
+                <div class="service-card-main">
+                    <div class="service-icon-main"><i class="fas fa-wrench"></i></div>
+                    <h4>Repair & Technical Support</h4>
+                    <p>Rapid, certified repair services for all HP, Xerox, and other major printer models. Our expert
+                        technicians provide on-site diagnosis and repair using genuine spare parts to ensure the
+                        longevity and reliability of your equipment.</p>
+                </div>
+
+                <div class="service-card-main">
+                    <div class="service-icon-main"><i class="fas fa-box-open"></i></div>
+                    <h4>Genuine Consumables & Supplies</h4>
+                    <p>We supply authentic HP and Xerox toners, inks, and other consumables. Enjoy flexible, timely
+                        delivery options and rest assured that you are using genuine products that protect your hardware
+                        and ensure high-quality output.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="value-propositions">
+            <div class="section-title">
+                <h3>Why Choose Our Service Model?</h3>
+            </div>
+
+            <div class="value-grid">
+
+                <div class="value-item">
+                    <i class="fas fa-cogs"></i>
+                    <div>
+                        <h5>Business Continuity Planning</h5>
+                        <p>Proactive strategies and standby equipment ensure your printing operations never stop, even
+                            in remote locations.</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <i class="fas fa-piggy-bank"></i>
+                    <div>
+                        <h5>Reduced Capital Expenditure</h5>
+                        <p>Shift from CapEx to OpEx. Rent equipment and pay only for pages printed, reducing upfront
+                            investment.</p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <div>
+                        <h5>Pan-India Service Network</h5>
+                        <p>Support in demanding locations from Tezpur to Kanyakumari. We cover the toughest terrains.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="value-item">
+                    <i class="fas fa-headset"></i>
+                    <div>
+                        <h5>Single Point of Accountability</h5>
+                        <p>One partner for sales, maintenance, consumables, and multi-brand support (HP, Xerox, etc.).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="service-process">
+            <div class="section-title">
+                <h3>Our Service Delivery Process</h3>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Needs Assessment</h4>
+                        <p>We analyze your printing requirements, volume, and workflow to recommend optimal solutions.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Solution Design</h4>
+                        <p>Customized service plan with equipment recommendations <br>
+                             and cost projections.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Implementation</h4>
+                        <p>Seamless installation, configuration, and staff training for minimal <br>
+                            disruption.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Ongoing Support</h4>
+                        <p>Proactive monitoring, maintenance, and continuous optimization of your printing environment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-comparison">
+            <div class="section-title">
+                <h3>Service Comparison: Traditional vs. ValuPrint</h3>
+            </div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Traditional Printing</th>
+                        <th>ValuPrint Managed Service</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cost Predictability</td>
+                        <td class="cross">Variable monthly costs</td>
+                        <td class="check">Fixed cost per page</td>
+                    </tr>
+                    <tr>
+                        <td>Equipment Maintenance</td>
+                        <td class="cross">Reactive repairs</td>
+                        <td class="check">Proactive monitoring</td>
+                    </tr>
+                    <tr>
+                        <td>Supply Management</td>
+                        <td class="cross">Manual ordering</td>
+                        <td class="check">Automated replenishment</td>
+                    </tr>
+                    <tr>
+                        <td>Uptime Guarantee</td>
+                        <td class="cross">No guarantee</td>
+                        <td class="check">99.5% uptime SLA</td>
+                    </tr>
+                    <tr>
+                        <td>Technical Support</td>
+                        <td class="cross">Pay-per-incident</td>
+                        <td class="check">Office-hours included</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="success-metrics">
+            <div class="section-title">
+                <h3 style="color: white;">Our Impact in Numbers</h3>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-value">99%</div>
+                    <div class="metric-label">Uptime Guarantee</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">40%</div>
+                    <div class="metric-label">Average Cost Reduction</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">80+</div>
+                    <div class="metric-label">Cities Served</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-value">25+</div>
+                    <div class="metric-label">Years Experience</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="managed-service-details">
+            <h3>Focus on ValuPrint: Cost Savings & Efficiency</h3>
+            <p style="color: var(--corporate-gray-700); margin-bottom: 30px; font-size: 1rem;">Our Managed Print Service model,
+                ValuPrint, is designed to turn your printing into a predictable, high-performance utility. It's about
+                buying results, not machines.</p>
+
+            <div class="details-grid">
+
+                <div class="feature-point">
+                    <i class="fas fa-money-check-alt"></i>
+                    <div>
+                        <strong>Cost Control</strong>
+                        <p>Fixed cost per print makes budgeting simple and predictable.</p>
+                    </div>
+                </div>
+
+                <div class="feature-point">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div>
+                        <strong>Proactive Monitoring</strong>
+                        <p>We monitor supply levels and maintenance needs remotely to prevent failures.</p>
+                    </div>
+                </div>
+
+                <div class="feature-point">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <strong>Enhanced Security</strong>
+                        <p>Firmware updates and managed access protect sensitive documents and network integrity.</p>
+                    </div>
+                </div>
+
+                <div class="feature-point">
+                    <i class="fas fa-recycle"></i>
+                    <div>
+                        <strong>Environmental Impact</strong>
+                        <p>Optimized equipment use and genuine supplies reduce waste and power consumption.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="brochure-download">
+            <h3>Download Our Full Managed Services Brochure</h3>
+            <p>Get a comprehensive overview of our <b>ValuPrint</b> offerings, coverage areas, and cost-saving models.
+            </p>
+            <a href="#" class="btn-download" download="SIFintechprofile2025+(1).pdf">
+                <i class="fas fa-file-pdf"></i> Download PDF Now!
+            </a>
+        </section>
+        <section class="cta-banner">
+            <h3>Ready to Experience Predictable, Worry-Free Printing?</h3>
+            <p>Let's discuss how ValuPrint can revolutionize your business operations today.</p>
+            <a href="contact.html?service=valuprint">Request a Service Consultation</a>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <h4>SI FINTECH PVT LTD</h4>
+                <p>
+                    <b>Authorized HP Commercial Partner since 1998, providing sales, service, and Managed printing
+                        solutions
+                        (MPS) across India.</b>
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="products.html">Product Catalogue</a></li>
+                    <li><a href="services.html">Managed Services</a></li>
+                    <li><a href="about.html">Our History</a></li>
+                    <li><a href="contact.html">Contact Sales</a></li>
+                    <li><a href="unique.html">Why Choose Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h4>Contact Info</h4>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Corporate Office: Ground floor, Shop No 20, Popular House Opp DSK Chintamany Complex, Kelkar
+                        Road, 638 Narayan Peth, Pune - 411030, Maharashtra, India.</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919876543210">Sales: +91 98765 43210</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-headset"></i>
+                    <a href="tel:+919988776655">Support: +91 99887 76655</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:alok@logicalhub.com">alok@logicalhub.com</a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-cta">
+                <h4>Ready to Optimize?</h4>
+                <p>Let our experts find the perfect printing solution for your business.</p>
+                <a href="contact.html" class="btn-footer-cta">Get a Consultation</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 SI FINTECH PVT LTD | Empowering Your Business with Technology | All Rights Reserved |Developed By Sairajbadhe24@gmail.com
+        </div>
+    </footer>
+
+    <div class="floating-support" id="floatingSupport">
+        <div class="support-options" role="menu" aria-hidden="true">
+            <a href="tel:+919876543210" class="support-option" role="menuitem">
+                <i class="fas fa-phone"></i>
+                <span>Call Sales</span>
+            </a>
+            <a href="tel:+919988776655" class="support-option" role="menuitem">
+                <i class="fas fa-headset"></i>
+                <span>Call Support</span>
+            </a>
+            <a href="https://wa.me/919370908324" class="support-option" target="_blank" rel="noopener" role="menuitem">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="mailto:alok@logicalhub.com" class="support-option" role="menuitem">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+        <button class="support-icon-float" id="supportToggle" aria-expanded="false" aria-controls="supportOptions" aria-label="Open support options">
+            <i class="fas fa-headset"></i>
+        </button>
+    </div>
+
+    <div class="back-to-top" id="backToTop" role="button" tabindex="0" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set active navigation link
+            const currentPath = window.location.pathname.split("/").pop();
+            const links = document.querySelectorAll("nav a");
+
+            // Resolve current page path for activation
+            const resolvedPath = currentPath === "" ? "index.html" : currentPath;
+
+            links.forEach(link => {
+                if (link.getAttribute("href") === resolvedPath) {
+                    link.classList.add("active");
+                }
+            });
+
+            // Animate metrics on scroll
+            const animateMetrics = () => {
+                const metrics = document.querySelectorAll('.metric-value');
+                metrics.forEach(metric => {
+                    const value = metric.textContent;
+                    // Check if the value is a number (ignoring % and + for target calculation)
+                    if (!isNaN(parseInt(value))) {
+                        let count = 0;
+                        const target = parseInt(value.replace(/[^\d]/g, ''));
+                        const suffix = value.replace(/[0-9]/g, '');
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        
+                        // Only start animation if element hasn't been animated (to prevent re-running on scroll)
+                        if (!metric.dataset.animated) {
+                            metric.dataset.animated = 'true';
+                            const timer = setInterval(() => {
+                                count += increment;
+                                if (count >= target) {
+                                    count = target;
+                                    clearInterval(timer);
+                                }
+                                // Ensure value includes its original suffix
+                                metric.textContent = Math.floor(count) + suffix;
+                            }, 16);
+                        }
+                    }
+                });
+            };
+
+            // Intersection Observer for metrics animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateMetrics();
+                        // observer.unobserve(entry.target); // Keep observer to ensure the animation is triggered if user scrolls up and down
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            const metricsSection = document.querySelector('.success-metrics');
+            if (metricsSection) {
+                observer.observe(metricsSection);
+            }
+
+            // Floating Support Toggle Logic
+            const floatingSupport = document.getElementById('floatingSupport');
+            const supportToggle = document.getElementById('supportToggle');
+            const supportOptions = document.querySelector('.support-options');
+            const backToTopBtn = document.getElementById('backToTop');
+
+            const toggleBackToTop = () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            };
+            
+            window.addEventListener('scroll', toggleBackToTop);
+            
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+
+            if (supportToggle) {
+                supportToggle.addEventListener('click', () => {
+                    const isExpanded = supportToggle.getAttribute('aria-expanded') === 'true';
+                    supportToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+                    floatingSupport.classList.toggle('active');
+                    supportOptions.setAttribute('aria-hidden', isExpanded.toString());
+                    toggleBackToTop(); // Recalculate back to top position after options open/close
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

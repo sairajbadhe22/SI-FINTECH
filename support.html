@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - SI FINTECH LTD | HP Printer Solutions</title>
+    <meta name="description"
+        content="Get expert support for your HP printers and plotters. SI FINTECH LTD offers technical assistance, maintenance services, and troubleshooting across India.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =======================================
+           Global/Design Variables (Consistent Palette - Merged from all pages)
+           ======================================= */
+        :root {
+            --primary-blue: #0078D4;
+            /* Deep HP/Microsoft Blue (Action, Focus) */
+            --secondary-navy: #0B2B4A;
+            /* Dark Navy (Headings, Footer, Authority) */
+            --accent-sky: #2FB8FF;
+            /* Bright Sky Blue (Hover, Highlight) */
+            --accent-red: #e63946;
+            /* Support/Urgent CTA */
+            --accent-green: #2a9d8f;
+            /* Checkmarks/Success */
+            --text-dark: #2c3e50;
+            /* Near-Black Text for Readability */
+            --text-medium: #607d8b;
+            /* Subtle Grey for Specs/Labels */
+            --bg-main: #fcfcfc;
+            /* Near-White for content boxes */
+            --bg-light: #f4f7f9;
+            /* Very Light Grey for body background */
+            --border-subtle: #e1e8ed;
+            /* Light Border Colour */
+            --shadow-card: 0 8px 30px rgba(11, 43, 74, 0.08);
+            --header-gradient: linear-gradient(45deg, #121521, #38476b, #b6192e, #ffc1ac);
+            --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--accent-sky));
+            --gradient-secondary: linear-gradient(135deg, var(--secondary-navy), #1f4268);
+
+            /* Corporate Colors (from other pages) */
+            --corporate-gray-900: #1a202c;
+            --corporate-gray-700: #2d3748;
+            --accent-indigo: #5a67d8;
+        }
+
+        /* Base and Layout Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            transition: color 0.2s;
+        }
+
+        /* ---------------------------------------
+           Header and Navigation (Consistent with other pages)
+           --------------------------------------- */
+        header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 15px 25px;
+            border-bottom: 4px solid var(--secondary-navy);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 55px;
+            /* Consistent size */
+            width: auto;
+        }
+
+        .header-content h1 {
+            font-size: 1.5rem;
+            /* Consistent size */
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: 0.85rem;
+            /* Consistent size */
+            gap: 5px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            color: white;
+            gap: 8px;
+        }
+
+        .contact-item a {
+            color: inherit;
+            font-weight: 500;
+        }
+
+        .contact-item i {
+            color: var(--accent-sky);
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-blue);
+        }
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        nav a {
+            padding: 12px 0;
+            /* Consistent padding */
+            font-size: 1rem;
+            /* Consistent size */
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.2s, border-bottom 0.2s;
+            border-bottom: 3px solid transparent;
+            /* Consistent thickness */
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+            border-bottom-color: var(--accent-sky);
+        }
+
+        nav a.active {
+            color: var(--primary-blue);
+            border-bottom-color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .support-link {
+            margin-left: auto;
+            background: var(--accent-red);
+            padding: 8px 15px !important;
+            border-radius: 6px;
+            border-bottom: none !important;
+            font-weight: 600;
+            align-self: center;
+            color: white !important;
+        }
+
+        .support-link:hover {
+            background: #c1121f;
+            color: white !important;
+            transform: translateY(-1px);
+        }
+
+        /* Mobile Navigation Toggle (Needed for responsiveness) */
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ---------------------------------------
+           Support Hero Section (Refined Gradient)
+           --------------------------------------- */
+        .support-hero {
+            /* Using a muted blue/navy gradient for a more enterprise look */
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-navy) 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .support-hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .support-hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+        }
+
+        .support-hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .support-cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Generic Button Styles (For consistency) */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent-sky);
+            color: var(--secondary-navy);
+            border-color: var(--accent-sky);
+        }
+
+        .btn-primary:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transform: translateY(-2px);
+            border: 2px solid white;
+        }
+
+
+        /* ---------------------------------------
+           Support Options Section (Service Cards Refined)
+           --------------------------------------- */
+        .support-options {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .support-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: var(--secondary-navy);
+            position: relative;
+            font-weight: 700;
+            display: block;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-blue);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .support-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--primary-blue);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .support-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .support-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .support-card h3 {
+            color: var(--corporate-gray-900);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .support-card p {
+            color: var(--text-medium);
+            margin-bottom: 20px;
+        }
+
+        .support-contact-info {
+            margin-top: auto;
+            /* Pushes contact info to the bottom */
+            padding-top: 15px;
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        .support-hours,
+        .response-time,
+        .service-area {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+            margin-top: 5px;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-whatsapp:hover {
+            background: #128C7E;
+            color: white;
+        }
+
+        /* ---------------------------------------
+           Common Issues Section (FAQ Accordion)
+           --------------------------------------- */
+        .common-issues {
+            padding: 80px 20px;
+            background: var(--bg-main);
+        }
+
+        .issues-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .issues-grid {
+            margin-top: 50px;
+        }
+
+        .issue-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .issue-header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border-left: 4px solid var(--primary-blue);
+            background: var(--bg-light);
+        }
+
+        .issue-item.active .issue-header {
+            background: var(--bg-main);
+        }
+
+        .issue-header h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--corporate-gray-900);
+            font-weight: 600;
+        }
+
+        .issue-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            transition: transform 0.3s;
+            padding: 0;
+        }
+
+        .issue-item.active .issue-toggle {
+            transform: rotate(180deg);
+        }
+
+        .issue-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        }
+
+        .issue-item.active .issue-content {
+            padding: 20px 20px 20px;
+            max-height: 500px;
+            /* Large enough to display content */
+        }
+
+        .issue-content h4 {
+            color: var(--primary-blue);
+            margin: 0 0 10px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .issue-content ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .issue-content li {
+            margin-bottom: 8px;
+            color: var(--text-medium);
+            font-size: 0.95rem;
+        }
+
+        .solution-level {
+            margin-top: 15px;
+        }
+
+        .level {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .level.easy {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .level.medium {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .level.hard {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        /* ---------------------------------------
+           Support Request Form Section (Refined Layout)
+           --------------------------------------- */
+        .support-form-section {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .form-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .form-content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .support-form {
+            margin-top: 30px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--corporate-gray-900);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.15);
+            outline: none;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: normal;
+        }
+
+        .checkbox-label input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: var(--secondary-navy);
+            transform: translateY(-2px);
+        }
+
+        .form-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .support-tips,
+        .emergency-support {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .support-tips h3,
+        .emergency-support h3 {
+            color: var(--corporate-gray-900);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            border-bottom: 2px solid var(--border-subtle);
+            padding-bottom: 10px;
+        }
+
+        .support-tips ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        .support-tips li {
+            margin-bottom: 10px;
+            color: var(--text-medium);
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .support-tips li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .emergency-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--accent-red);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: background 0.3s;
+        }
+
+        .emergency-btn:hover {
+            background: #c1121f;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .emergency-note {
+            font-size: 0.85rem;
+            color: var(--text-medium);
+        }
+
+        /* ---------------------------------------
+           FAQ Section (Consistent with Contact Page)
+           --------------------------------------- */
+        .faq-section {
+            padding: 80px 20px;
+            background: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-grid {
+            margin-top: 50px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+        }
+
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border-left: 4px solid var(--accent-indigo);
+            background: var(--bg-main);
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--corporate-gray-900);
+            font-weight: 600;
+        }
+
+        .faq-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            color: var(--text-medium);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* ---------------------------------------
+           Footer (Consistent with other pages)
+           --------------------------------------- */
+        .main-footer {
+            background: var(--corporate-gray-900);
+            color: #aebecd;
+            padding: 60px 20px 0;
+            font-size: 0.95rem;
+            border-top: 4px solid var(--accent-indigo);
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-column h4 {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-indigo);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .footer-column p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-column p i {
+            margin-top: 4px;
+            /* Align icon better */
+            flex-shrink: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a,
+        .footer-contact a {
+            color: #aebecd;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover,
+        .footer-contact a:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-contact i {
+            color: var(--accent-indigo);
+            margin-right: 10px;
+            width: 15px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-teal);
+        }
+
+        .btn-footer-cta {
+            display: inline-block;
+            background-color: var(--accent-indigo);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn-footer-cta:hover {
+            background-color: var(--accent-teal);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 20px;
+            font-size: 0.85rem;
+            color: #889aad;
+        }
+
+        /* ---------------------------------------
+           Floating Support & Back to Top
+           --------------------------------------- */
+        .floating-support {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .support-icon-float {
+            border: none;
+            width: 55px;
+            height: 55px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .support-icon-float:hover {
+            transform: scale(1.05);
+        }
+
+        .support-options {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 160px;
+        }
+
+        .floating-support.active .support-options {
+            display: flex;
+        }
+
+        .support-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            border-radius: 4px;
+            color: var(--secondary-navy);
+            font-weight: 500;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .support-option:hover {
+            background: var(--bg-light);
+        }
+
+        .support-option i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            bottom: 90px;
+        }
+
+        .floating-support.active+.back-to-top.visible {
+            bottom: 200px;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-navy);
+            transform: translateY(-2px);
+        }
+
+
+        /* ---------------------------------------
+           Responsive Design (Consolidated)
+           --------------------------------------- */
+        @media (max-width: 1024px) {
+            .form-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .header-contact {
+                align-items: center;
+            }
+
+            .mobile-nav-toggle {
+                display: block;
+                position: absolute;
+                top: 25px;
+                right: 20px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            nav.active .nav-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--secondary-navy);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            nav.active a {
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                color: white;
+            }
+
+            .support-hero {
+                padding: 60px 20px;
+            }
+
+            .support-hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .support-hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .support-cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="SI FINTECH LTD Logo Design.png" alt="SI Fintech Logo">
+                <h1>SI FINTECH PVT LTD</h1>
+            </div>
+            <div class="header-contact">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919876543210">Sales: +91 98765 43210</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-headset"></i>
+                    <a href="tel:+919988776655">Support: +91 99887 76655</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:alok@logicalhub.com">alok@logicalhub.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav id="mainNav">
+        <div class="nav-container" id="navContainer">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="unique.html">Why Choose Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="support.html" class="active support-link"><i class="fas fa-headset"></i> Support</a>
+        </div>
+    </nav>
+
+    <section class="support-hero">
+        <div class="support-hero-content">
+            <h1>Expert Support for Your HP Printers</h1>
+            <p>office hours technical assistance, troubleshooting, and maintenance services across India</p>
+            <div class="support-cta-buttons">
+                <a href="#contact-support" class="btn btn-primary"><i class="fas fa-headset"></i> Contact Support
+                    Now</a>
+                <a href="#troubleshooting" class="btn btn-secondary"><i class="fas fa-search"></i> Self-Help Guides</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-options">
+        <div class="support-container">
+            <h2 class="section-title">How Can We Help You?</h2>
+            <div class="support-grid">
+                <div class="support-card">
+                    <div>
+                        <div class="support-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Phone Support</h3>
+                        <p>Speak directly with our certified HP technicians for immediate assistance</p>
+                    </div>
+                    <div class="support-contact-info">
+                        <p><strong>Support Hotline:</strong></p>
+                        <a href="tel:+919988776655" class="contact-link">+91 99887 76655</a>
+                        <p class="support-hours">Mon-Sun: 8:00 AM - 10:00 PM</p>
+                    </div>
+                </div>
+                <div class="support-card">
+                    <div>
+                        <div class="support-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp Support</h3>
+                        <p>Quick assistance via WhatsApp - share images/videos of issues for faster resolution</p>
+                    </div>
+                    <div class="support-contact-info">
+                        <a href="https://wa.me/919370908324" class="btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Message Us on WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="support-card">
+                    <div>
+                        <div class="support-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Support</h3>
+                        <p>Detailed technical queries? Send us an email with complete details</p>
+                    </div>
+                    <div class="support-contact-info">
+                        <a href="mailto:support@sifintech.com" class="contact-link">support@sifintech.com</a>
+                        <p class="response-time">Response within 2-4 hours</p>
+                    </div>
+                </div>
+                <div class="support-card">
+                    <div>
+                        <div class="support-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>On-Site Service</h3>
+                        <p>Our certified engineers will visit your location to provide hands-on technical support</p>
+                    </div>
+                    <div class="support-contact-info">
+                        <a href="#contact-support" class="btn btn-primary">Request On-Site Visit</a>
+                        <p class="service-area">Available in 25+ cities across India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="common-issues" id="troubleshooting">
+        <div class="issues-container">
+            <h2 class="section-title">Common Printer Issues & Solutions</h2>
+            <div class="issues-grid">
+                <div class="issue-item">
+                    <div class="issue-header">
+                        <h3><i class="fas fa-print"></i> Printer Not Printing</h3>
+                        <button class="issue-toggle" aria-expanded="false"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="issue-content">
+                        <h4>Quick Checks:</h4>
+                        <ul>
+                            <li>Verify power connection and that printer is turned on</li>
+                            <li>Check for paper jams and clear if any</li>
+                            <li>Ensure printer is set as default in your computer settings</li>
+                            <li>Check ink/toner levels and replace if empty</li>
+                            <li>Restart both printer and computer</li>
+                        </ul>
+                        <div class="solution-level">
+                            <span class="level easy">Easy Fix</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="issue-item">
+                    <div class="issue-header">
+                        <h3><i class="fas fa-tint"></i> Poor Print Quality</h3>
+                        <button class="issue-toggle" aria-expanded="false"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="issue-content">
+                        <h4>Possible Solutions:</h4>
+                        <ul>
+                            <li>Run printer head cleaning utility from printer software</li>
+                            <li>Check for clogged print heads and clean if necessary</li>
+                            <li>Use genuine HP cartridges for optimal performance</li>
+                            <li>Adjust print quality settings in printer preferences</li>
+                            <li>Replace low or empty cartridges</li>
+                        </ul>
+                        <div class="solution-level">
+                            <span class="level medium">Medium Difficulty</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="issue-item">
+                    <div class="issue-header">
+                        <h3><i class="fas fa-wifi"></i> Connectivity Issues</h3>
+                        <button class="issue-toggle" aria-expanded="false"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="issue-content">
+                        <h4>Troubleshooting Steps:</h4>
+                        <ul>
+                            <li>Restart your router and printer</li>
+                            <li>Check if printer is connected to the correct Wi-Fi network</li>
+                            <li>Reinstall printer drivers from official HP website</li>
+                            <li>Try USB connection to isolate network issues</li>
+                            <li>Update printer firmware to latest version</li>
+                        </ul>
+                        <div class="solution-level">
+                            <span class="level medium">Medium Difficulty</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="issue-item">
+                    <div class="issue-header">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Error Messages</h3>
+                        <button class="issue-toggle" aria-expanded="false"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="issue-content">
+                        <h4>Common Error Resolutions:</h4>
+                        <ul>
+                            <li>Note the exact error code and message</li>
+                            <li>Search for specific error code in HP support database</li>
+                            <li>Check for paper jams in all access areas</li>
+                            <li>Reset printer to factory settings (backup config first)</li>
+                            <li>Update or reinstall printer firmware</li>
+                        </ul>
+                        <div class="solution-level">
+                            <span class="level hard">Technical Assistance Recommended</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="support-form-section" id="contact-support">
+        <div class="form-container">
+            <div class="form-content">
+                <h2 class="section-title">Submit a Support Request</h2>
+                <p>Can't find a solution? Fill out the form below and our technical team will contact you shortly.</p>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="05e21b2f-cd3a-42c2-b0ed-e7d63f8b35a6">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="printer-model">Printer Model *</label>
+                        <input type="text" id="printer-model" name="printer-model" required
+                            placeholder="e.g., HP LaserJet Pro MFP M428fdw">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issue-type">Issue Type *</label>
+                        <select id="issue-type" name="issue-type" required>
+                            <option value="">Select Issue Type</option>
+                            <option value="printing">Printing Problems</option>
+                            <option value="quality">Print Quality Issues</option>
+                            <option value="connectivity">Connectivity Issues</option>
+                            <option value="paper-jam">Paper Jams</option>
+                            <option value="error-message">Error Messages</option>
+                            <option value="hardware">Hardware Failure</option>
+                            <option value="software">Software/Driver Issues</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issue-description">Issue Description *</label>
+                        <textarea id="issue-description" name="issue-description" rows="5" required
+                            placeholder="Please describe your issue in detail, including any error messages, when it started, and steps you've already tried..."></textarea>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-submit">Submit Support Request</button>
+                </form>
+            </div>
+            
+            <div class="form-sidebar">
+                <div class="support-tips">
+                    <h3>Before Submitting</h3>
+                    <ul>
+                        <li>Have your printer model number ready</li>
+                        <li>Note any error codes displayed</li>
+                        <li>Try basic troubleshooting steps first</li>
+                        <li>Take photos of any error messages or issues</li>
+                        <li>Check if issue occurs with multiple computers</li>
+                    </ul>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are your support hours?</h3>
+                        <button class="faq-toggle" aria-expanded="false"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our standard support is available Monday to Sunday from 8:00 AM to 10:00 PM. Premium support
+                            customers have access to Office hours emergency support for critical issues.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you provide on-site support?</h3>
+                        <button class="faq-toggle" aria-expanded="false"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we provide on-site support in 25+ cities across India. Response times vary based on your
+                            service plan: next business day for Premium support and within 48 hours for Standard support
+                            customers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I check my printer's warranty status?</h3>
+                        <button class="faq-toggle" aria-expanded="false"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can check your printer's warranty status by visiting the HP Support website and entering
+                            your printer serial number. Alternatively, contact our support team with your printer
+                            details, and we can check it for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What information should I have ready before calling support?</h3>
+                        <button class="faq-toggle" aria-expanded="false"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To help us assist you quickly, please have the following information ready: printer model
+                            number, serial number, details of the issue, any error messages displayed, and steps you've
+                            already tried to resolve the issue.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <h4>SI FINTECH PVT LTD</h4>
+                <p> <b>Authorized HP Commercial Partner since 1998, providing sales, service, and managed printing
+                        solutions
+                        (MPS) across India.</b></p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="products.html">Product Catalogue</a></li>
+                    <li><a href="services.html">Managed Services</a></li>
+                    <li><a href="about.html">Our History</a></li>
+                    <li><a href="contact.html">Contact Sales</a></li>
+                    <li><a href="unique.html">Why Choose Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Corporate Office:
+                    Ground floor, Shop No 20,
+                    Popular House Opp DSK Chintamany Complex,
+                    Kelkar Road, 638 Narayan Peth, Pune - 411030,
+                    Maharashtra, India.</p>
+                <p><i class="fas fa-phone-alt"></i> Sales: +91 98765 43210</p>
+                <p><i class="fas fa-headset"></i> Support: <a href="tel:+919988776655">+91 99887 76655</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:alok@logicalhub.com">alok@logicalhub.com</a></p>
+            </div>
+
+            <div class="footer-column footer-cta">
+                <h4>Need Immediate Support?</h4>
+                <p>Our technical team is ready to assist with your printer issues.</p>
+                <a href="tel:+919988776655" class="btn-footer-cta">Call Support Now</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 SI FINTECH PVT LTD | Empowering Your Business with Technology | All Rights Reserved |Deveolped by Sairaj
+        </div>
+    </footer>
+
+    <div class="floating-support" id="floatingSupport">
+        <div class="support-options" role="menu" aria-hidden="true">
+            <a href="tel:+919876543210" class="support-option" role="menuitem">
+                <i class="fas fa-phone"></i>
+                <span>Call Sales</span>
+            </a>
+            <a href="tel:+919988776655" class="support-option" role="menuitem">
+                <i class="fas fa-headset"></i>
+                <span>Call Support</span>
+            </a>
+            <a href="https://wa.me/919370908324" class="support-option" target="_blank" rel="noopener" role="menuitem">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="mailto:alok@logicalhub.com" class="support-option" role="menuitem">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+        <button class="support-icon-float" id="supportToggle" aria-expanded="false" aria-controls="supportOptions"
+            aria-label="Open support options">
+            <i class="fas fa-headset"></i>
+        </button>
+    </div>
+
+    <div class="back-to-top" id="backToTop" role="button" tabindex="0" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set active navigation link
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            const links = document.querySelectorAll('nav a');
+            links.forEach(l => {
+                if (l.getAttribute('href') === currentPath) {
+                    document.querySelector('nav a.active')?.classList.remove('active');
+                    l.classList.add('active');
+                }
+            });
+
+            // Accordion Toggle Logic (Common Issues & FAQ)
+            const setupAccordion = (selector, activeClass) => {
+                document.querySelectorAll(selector).forEach(button => {
+                    button.addEventListener('click', function () {
+                        const item = this.closest(activeClass);
+                        const content = item.querySelector('.issue-content, .faq-answer');
+                        const isExpanded = item.classList.contains('active');
+
+                        // Close all other items
+                        document.querySelectorAll(activeClass).forEach(otherItem => {
+                            if (otherItem !== item && otherItem.classList.contains('active')) {
+                                otherItem.classList.remove('active');
+                                otherItem.querySelector('.issue-toggle, .faq-toggle')?.setAttribute('aria-expanded', 'false');
+                            }
+                        });
+
+                        // Toggle current item
+                        item.classList.toggle('active');
+                        this.setAttribute('aria-expanded', (!isExpanded).toString());
+                    });
+                });
+            };
+
+            setupAccordion('.issue-toggle', '.issue-item');
+            setupAccordion('.faq-toggle', '.faq-item');
+
+            // Form submission alert (Placeholder since no backend is provided)
+            // document.getElementById('supportForm').addEventListener('submit', function (e) {
+            //     e.preventDefault();
+            //     alert('Thank you for your support request! Our team will contact you shortly.');
+            //     this.reset();
+            // });
+
+            // Floating Support Toggle Logic
+            const floatingSupport = document.getElementById('floatingSupport');
+            const supportToggle = document.getElementById('supportToggle');
+            const supportOptions = document.querySelector('.support-options');
+            const backToTopBtn = document.getElementById('backToTop');
+
+            // Function to handle scroll and set visibility
+            const toggleBackToTop = () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            };
+
+            window.addEventListener('scroll', toggleBackToTop);
+
+            // Handle click and keyboard enter for scrolling
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+
+            if (supportToggle) {
+                supportToggle.addEventListener('click', () => {
+                    const isExpanded = supportToggle.getAttribute('aria-expanded') === 'true';
+                    supportToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+                    floatingSupport.classList.toggle('active');
+                    supportOptions.setAttribute('aria-hidden', isExpanded.toString());
+                    toggleBackToTop(); // Recalculate back to top position after options open/close
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

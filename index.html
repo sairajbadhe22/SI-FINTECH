@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI FINTECH LTD - Premium HP Printer Solutions</title>
+    <meta name="description"
+        content="SI FINTECH LTD - HP Authorized Sales & Service Commercial Partner offering premium printing solutions, managed services, and expert support across India.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =======================================
+           Global/Design Variables (Consistent Palette)
+           ======================================= */
+        :root {
+            --primary-blue: #0056b3;
+            /* HP Blue/Core Brand */
+            --secondary-navy: #0B2B4A;
+            /* Dark Header/Footer/Text */
+            --accent-sky: #2FB8FF;
+            /* Primary CTA/Highlight */
+            --accent-red: #e63946;
+            /* Support/Urgent CTA */
+            --text-dark: #2c3e50;
+            --text-medium: #607d8b;
+            --bg-main: #fcfcfc;
+            --bg-light: #f4f7f9;
+            /* Subtle background */
+            --border-subtle: #e1e8ed;
+            --shadow-card: 0 10px 30px rgba(11, 43, 74, 0.08);
+            --shadow-hover: 0 20px 40px rgba(11, 43, 74, 0.15);
+            /* Updated Header Gradient for a premium, darker feel */
+            --header-gradient: linear-gradient(45deg, #121521, #38476b, #b6192e, #ffc1ac);
+            --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--accent-sky));
+            --gradient-secondary: linear-gradient(135deg, var(--secondary-navy), #1f4268);
+            --max-width: 1280px;
+        }
+
+        /* Base and Layout Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--bg-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            transition: color 0.2s, background-color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-sky);
+        }
+
+        /* ---------------------------------------
+           Header and Navigation (Refined)
+           --------------------------------------- */
+        header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 15px 25px;
+            /* Reduced padding */
+            border-bottom: 3px solid var(--primary-blue);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            position: relative;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+        .header-content {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 55px;
+            /* Slightly reduced logo size */
+            width: auto;
+        }
+
+        .header-content h1 {
+            font-size: 1.5rem;
+            /* Reduced font size */
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            font-size: 0.85rem;
+        }
+
+        .header-contact .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-contact a {
+            color: white;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .header-contact a:hover {
+            color: var(--accent-sky);
+        }
+
+        nav {
+            background: var(--secondary-navy);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+        }
+
+        nav a {
+            padding: 12px 0;
+            /* Reduced padding */
+            font-size: 1rem;
+            color: white;
+            font-weight: 500;
+            transition: color 0.2s, border-bottom 0.2s;
+            border-bottom: 3px solid transparent;
+            /* Reduced border thickness */
+        }
+
+        nav a:hover {
+            color: var(--accent-sky);
+            border-bottom-color: var(--accent-sky);
+        }
+
+        nav a.active {
+            color: white;
+            border-bottom-color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .support-link {
+            margin-left: auto;
+            background: var(--accent-red);
+            padding: 8px 15px !important;
+            border-radius: 6px;
+            border-bottom: none !important;
+            font-weight: 600;
+            align-self: center;
+            /* Align with nav links */
+        }
+
+        .support-link:hover {
+            background: #c1121f;
+            color: white !important;
+            transform: translateY(-1px);
+        }
+
+        /* ---------------------------------------
+           HERO SECTION (Tighter/More Professional)
+           --------------------------------------- */
+        .modern-hero {
+            position: relative;
+            min-height: 70vh;
+            /* Reduced height */
+            background: var(--gradient-secondary);
+            color: white;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('Home-page-photos/hp.jpg') center/cover;
+            opacity: 0.1;
+            /* Reduced opacity */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 60px 20px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            /* Reduced gap */
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 16px;
+            /* Reduced padding */
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+        }
+
+        .hero-text h1 {
+            font-size: 2.8rem;
+            /* Reduced font size for better decency */
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            /* Reduced font size */
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat {
+            text-align: left;
+            /* Aligned left for better flow with hero text */
+            min-width: 120px;
+        }
+
+        .hero-stat-number {
+            font-size: 2rem;
+            /* Reduced font size */
+            font-weight: 800;
+            color: var(--accent-sky);
+            display: block;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            /* Reduced padding */
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent-sky);
+            color: var(--secondary-navy);
+        }
+
+        .btn-primary:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transform: translateY(-2px);
+            border: 2px solid white;
+        }
+
+        .hero-visual {
+            position: relative;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .hero-product {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Keep existing float animation */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* ---------------------------------------
+           FEATURED SOLUTIONS SECTION (Refined Cards)
+           --------------------------------------- */
+        .featured-solutions {
+            padding: 80px 20px;
+            /* Reduced padding */
+            background: var(--bg-main);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .section-tag {
+            color: var(--primary-blue);
+            /* Changed tag color to primary blue */
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.8rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            /* Reduced font size */
+            color: var(--secondary-navy);
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            /* Reduced font size */
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+
+        .solutions-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 12px;
+            /* Softer corners */
+            padding: 30px;
+            /* Reduced padding */
+            box-shadow: 0 8px 20px rgba(11, 43, 74, 0.05);
+            /* Softer shadow */
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-subtle);
+            text-align: left;
+            /* Aligned left for pro look */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 380px;
+            /* Consistent height */
+        }
+
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .solution-icon {
+            width: 60px;
+            /* Reduced icon size */
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 20px 0;
+            /* Aligned left */
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .solution-card h3 {
+            font-size: 1.3rem;
+            /* Reduced font size */
+            color: var(--secondary-navy);
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .solution-card p {
+            color: var(--text-medium);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .solution-features {
+            list-style: none;
+            margin-bottom: 25px;
+            margin-top: auto;
+            /* Push features and button to bottom */
+        }
+
+        .solution-features li {
+            padding: 6px 0;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 20px;
+            /* Reduced padding */
+            font-size: 0.95rem;
+        }
+
+        .solution-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            /* Changed checkmark color */
+            font-weight: bold;
+        }
+
+        .solution-card .btn-primary {
+            margin-top: 15px;
+            align-self: flex-start;
+            /* Align button left */
+        }
+
+        /* ---------------------------------------
+           INDUSTRY FOCUS SECTION (Inline style for Decency)
+           --------------------------------------- */
+        .industry-focus {
+            padding: 60px 20px;
+            /* Reduced padding */
+            background: var(--bg-light);
+        }
+
+        .industry-grid {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: grid;
+            /* Updated to use the 3-column layout on large screens for a cleaner look */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .industry-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: left;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            /* Flexbox for icon and text alignment */
+            align-items: center;
+            gap: 15px;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .industry-icon {
+            flex-shrink: 0;
+            /* Prevent icon from shrinking */
+            width: 50px;
+            height: 50px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-navy);
+            font-size: 1.4rem;
+        }
+
+        .industry-text h3 {
+            font-size: 1.1rem;
+            color: var(--secondary-navy);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .industry-text p {
+            color: var(--text-medium);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+
+        /* ---------------------------------------
+           HP PARTNERSHIP BANNER
+           --------------------------------------- */
+        .partnership-banner {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 60px 20px;
+            /* Reduced padding */
+            text-align: center;
+        }
+
+        .hp-logo {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .partnership-content h2 {
+            font-size: 2rem;
+            /* Reduced font size */
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .partnership-content p {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        /* Add these styles to the existing <style> block */
+
+        /* ---------------------------------------
+   TESTIMONIALS CAROUSEL (Updated)
+   --------------------------------------- */
+        .testimonials-carousel {
+            max-width: 900px;
+            /* Increased max width for more impact */
+            margin: 0 auto;
+            overflow: hidden;
+            /* Hide extra slides */
+            position: relative;
+        }
+
+        .testimonial-slides-wrapper {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+            /* Smooth transition for slide changes */
+            width: 400%;
+            /* For 4 slides */
+        }
+
+        .testimonial-slide {
+            flex: 0 0 25%;
+            /* Each slide takes 25% of the wrapper (for 4 slides) */
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 6px 20px rgba(11, 43, 74, 0.05);
+            text-align: center;
+            border: 1px solid var(--border-subtle);
+            box-sizing: border-box;
+            /* Ensure padding is included in the 25% width */
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            font-style: italic;
+            min-height: 120px;
+            /* Ensure consistent card height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .author-logo-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--bg-light);
+            border: 3px solid var(--accent-sky);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .author-logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 5px;
+        }
+
+        .author-logo-placeholder {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary-navy);
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            color: var(--secondary-navy);
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            margin: 0;
+        }
+
+        /* Dots for navigation */
+        .carousel-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: var(--border-subtle);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: var(--primary-blue);
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Responsive adjustments for the carousel */
+        @media (max-width: 768px) {
+            .testimonial-text {
+                min-height: 100px;
+            }
+        }
+
+        /* ---------------------------------------
+           CTA SECTION (More contrast)
+           --------------------------------------- */
+        .cta-section {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-navy) 100%);
+            /* Stronger gradient */
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 2.3rem;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary-blue);
+            padding: 15px 35px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: 8px;
+        }
+
+        .btn-white:hover {
+            background: var(--accent-sky);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ---------------------------------------
+           Footer Styles (Tighter)
+           --------------------------------------- */
+        .main-footer {
+            background: var(--secondary-navy);
+            color: #aebecd;
+            padding: 50px 20px 0;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--primary-blue);
+        }
+
+        .footer-container {
+            max-width: var(--max-width);
+            margin: 0 auto 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 5px;
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-column p {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 6px;
+        }
+
+        .footer-links a,
+        .footer-contact a,
+        .footer-contact span {
+            color: #c6d8ea;
+            transition: color 0.2s;
+            line-height: 1.5;
+            display: inline-block;
+        }
+
+        .footer-links a:hover,
+        .footer-contact a:hover {
+            color: var(--accent-sky);
+        }
+
+        .footer-contact i {
+            color: var(--accent-sky);
+            margin-right: 8px;
+            width: 15px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            font-size: 1.3rem;
+            color: white;
+        }
+
+        .btn-footer-cta {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn-footer-cta:hover {
+            background-color: var(--accent-sky);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 0.8rem;
+            color: #889aad;
+        }
+
+        /* Floating Support (Use button for better accessibility) */
+        .floating-support {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .support-icon {
+            border: none;
+            width: 55px;
+            height: 55px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .support-icon:hover {
+            transform: scale(1.05);
+        }
+
+        .support-options {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 160px;
+        }
+
+        .floating-support.active .support-options {
+            display: flex;
+        }
+
+        .support-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            border-radius: 4px;
+            color: var(--secondary-navy);
+            font-weight: 500;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .support-option:hover {
+            background: var(--bg-light);
+        }
+
+        .support-option i {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            bottom: 90px;
+            /* Offset from floating support options */
+        }
+
+        .floating-support.active+.back-to-top.visible {
+            bottom: 200px;
+            /* Move up when options are open */
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-navy);
+            transform: translateY(-2px);
+        }
+
+        /* ---------------------------------------
+           Responsive Design
+           --------------------------------------- */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-stat {
+                text-align: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .industry-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .header-contact {
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .nav-container {
+                justify-content: space-around;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                padding: 10px 0;
+            }
+
+            .support-link {
+                margin-left: 0;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text p {
+                font-size: 1rem;
+            }
+
+            .solutions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .industry-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .industry-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .industry-text {
+                text-align: center;
+            }
+
+            .industry-icon {
+                margin: 0 auto;
+            }
+
+            .cta-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-column h4 {
+                margin-top: 20px;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .footer-contact-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-contact i {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+
+            .floating-support {
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .back-to-top {
+                bottom: 80px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="SI FINTECH LTD Logo Design.png" alt="SI Fintech Logo">
+                <h1>SI FINTECH PVT LTD</h1>
+            </div>
+            <div class="header-contact">
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919876543210">Sales: +91 98765 43210</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-headset"></i>
+                    <a href="tel:+919988776655">Support: +91 99887 76655</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:alok@logicalhub.com">alok@logicalhub.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container" role="navigation" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="unique.html">Why Choose Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="support.html" class="support-link"><i class="fas fa-headset"></i> Support</a>
+        </div>
+    </nav>
+
+    <section class="modern-hero" aria-labelledby="hero-heading">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">HP Authorized Commercial Partner Since 1998</span>
+                <h1 id="hero-heading">Transform Your Business Printing with Enterprise-Grade Solutions</h1>
+                <p>27 years of excellence in providing cutting-edge HP printing technology, managed services, and
+                    nationwide support across India.</p>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">5000+</span>
+                        <span class="hero-stat-label">Happy Clients</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">25+</span>
+                        <span class="hero-stat-label">Cities Served</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-number">99%</span>
+                        <span class="hero-stat-label">Satisfaction Rate</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary"><i class="fas fa-box-open"></i> Explore Products</a>
+                    <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Get Free
+                        Consultation</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <img src="Home-page-photos/HP-72525.png" alt="HP Enterprise Printer" class="hero-product" loading="lazy"
+                    width="420" height="420">
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-solutions" aria-labelledby="solutions-title">
+        <div class="section-header">
+            <span class="section-tag">Our Solutions</span>
+            <h2 id="solutions-title" class="section-title">Comprehensive Printing Solutions for Every Business Need</h2>
+            <p class="section-subtitle">From small offices to large enterprises, we provide tailored printing solutions
+                that drive efficiency and reduce costs.</p>
+        </div>
+
+        <div class="solutions-grid">
+            <article class="solution-card" role="listitem">
+                <div class="solution-icon" aria-hidden="true">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Managed Print Services</h3>
+                <p>Complete outsourcing of your printing infrastructure with proactive maintenance, security, and cost
+                    optimization for guaranteed uptime.</p>
+                <ul class="solution-features">
+                    <li>Reduce printing costs by up to 40%</li>
+                    <li>Proactive maintenance & monitoring</li>
+                    <li>Detailed usage reporting</li>
+                    <li>Guaranteed uptime</li>
+                </ul>
+                <a href="services.html" class="btn btn-primary">Learn More <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <article class="solution-card" role="listitem">
+                <div class="solution-icon" aria-hidden="true">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Professional Services & Support</h3>
+                <p>Expert installation, secure configuration, and guaranteed ongoing onsite and remote support for your
+                    entire
+                    printing environment.</p>
+                <ul class="solution-features">
+                    <li>Rapid onsite support across India</li>
+                    <li>Genuine HP parts guarantee</li>
+                    <li>24/7 emergency support</li>
+                    <li>Preventive maintenance checks</li>
+                </ul>
+                <a href="services.html" class="btn btn-primary">Explore Services <i class="fas fa-arrow-right"></i></a>
+            </article>
+
+            <article class="solution-card" role="listitem">
+                <div class="solution-icon" aria-hidden="true">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Enterprise Hardware & Sales</h3>
+                <p>Wide range of genuine HP printers, plotters, and scanners featuring the latest technology for
+                    businesses of all sizes and workloads.</p>
+                <ul class="solution-features">
+                    <li>Latest HP technology and innovations</li>
+                    <li>Competitive pricing & flexible leasing</li>
+                    <li>Installation & user training</li>
+                    <li>Full manufacturer warranty support</li>
+                </ul>
+                <a href="products.html" class="btn btn-primary">View Products <i class="fas fa-arrow-right"></i></a>
+            </article>
+        </div>
+    </section>
+
+    <section class="industry-focus" aria-labelledby="industry-title">
+        <div class="section-header">
+            <span class="section-tag">Industries We Serve</span>
+            <h2 id="industry-title" class="section-title">Trusted Printing Solutions Across Industries</h2>
+            <p class="section-subtitle">Tailored technology and service models designed to meet the unique compliance
+                and volume demands of your sector.</p>
+        </div>
+
+        <div class="industry-grid">
+            <div class="industry-card">
+                <div class="industry-icon"><i class="fas fa-building"></i></div>
+                <div class="industry-text">
+                    <h3>Corporate Offices</h3>
+                    <p>Secure, high-volume printing solutions for enterprise environments with advanced management
+                        features.</p>
+                </div>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="industry-text">
+                    <h3>Education</h3>
+                    <p>Cost-effective, centralized printing solutions for large educational institutions and
+                        universities.</p>
+                </div>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-icon"><i class="fas fa-hospital"></i></div>
+                <div class="industry-text">
+                    <h3>Healthcare</h3>
+                    <p>Reliable printing for medical records, prescriptions, and administrative needs with compliance
+                        focus.</p>
+                </div>
+            </div>
+
+            <div class="industry-card">
+                <div class="industry-icon"><i class="fas fa-industry"></i></div>
+                <div class="industry-text">
+                    <h3>Manufacturing</h3>
+                    <p>Robust and durable printing solutions for production environments, including specialized plotter
+                        support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonials-section" aria-labelledby="testimonials-heading">
+        <div class="section-header">
+            <span class="section-tag">Trust & Confidence</span>
+            <h2 id="testimonials-heading" class="section-title">What Our Clients Say</h2>
+        </div>
+
+        <div class="testimonials-carousel">
+            <div class="testimonial-slides-wrapper" id="testimonialWrapper">
+                <div class="testimonial-slide" role="article" aria-live="polite">
+                    <p class="testimonial-text">"SI FINTECH transformed our printing infrastructure. Their managed
+                        services
+                        reduced our costs by 40% while improving reliability. The team's expertise and responsiveness
+                        are
+                        exceptional."</p>
+                    <div class="testimonial-author">
+                        <div class="author-logo-container">
+                            <div class="author-logo-placeholder">TS</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Rahul Kumar</h4>
+                            <p>IT Manager, TechSolutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide" role="article" aria-live="polite">
+                    <p class="testimonial-text">"The procurement of our new HP fleet was seamless. Excellent pricing,
+                        swift
+                        installation, and their team handled all the training. Truly professional service from start to
+                        finish."</p>
+                    <div class="testimonial-author">
+                        <div class="author-logo-container">
+                            <div class="author-logo-placeholder">AEC</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Head of Procurement, Ace Engineering Corp.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide" role="article" aria-live="polite">
+                    <p class="testimonial-text">"We rely heavily on our plotters, and SI FINTECH's support has been
+                        flawless.
+                        Genuine parts and rapid onsite service keep our projects on track. A true partner."</p>
+                    <div class="testimonial-author">
+                        <div class="author-logo-container">
+                            <div class="author-logo-placeholder">CST</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Mark D'Souza</h4>
+                            <p>Operations Director, CityScape Technologies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slide" role="article" aria-live="polite">
+                    <p class="testimonial-text">"As a national bank, we need uniform service across 15+ branches. SI
+                        FINTECH
+                        delivers consistent, top-tier service and support wherever we are in India."</p>
+                    <div class="testimonial-author">
+                        <div class="author-logo-container">
+                            <div class="author-logo-placeholder">NB</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Anjali Singh</h4>
+                            <p>Branch IT Coordinator, National Bank of India.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots">
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-heading">
+        <div class="cta-content">
+            <h2 id="cta-heading">Ready to Optimize Your Printing Environment?</h2>
+            <p>Get a free assessment from our printing experts and discover how we can reduce your costs while improving
+                efficiency.</p>
+            <a href="contact.html" class="btn btn-white">Get Free Assessment <i class="fas fa-calculator"></i></a>
+        </div>
+    </section>
+
+    <footer class="main-footer" aria-labelledby="footer-heading">
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <h4>SI FINTECH PVT LTD</h4>
+                <p>
+                    <b>Authorized HP Commercial Partner since 1998, providing sales, service, and Managed printing
+                        solutions (MPS) across India.</b>
+                </p>
+                <div class="social-links" aria-label="Social Media Links">
+                    <a href="https://www.linkedin.com/cws/share?url=https://www.indiamart.com/sifintech/
+                            " aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/sharer.php?u=https://www.indiamart.com/sifintech/"
+                        aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://x.com/intent/post?url=https%3A%2F%2Fwww.indiamart.com%2Fsifintech%2F"
+                        aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+
+                </div>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="products.html">Product Catalogue</a></li>
+                    <li><a href="services.html">Managed Services</a></li>
+                    <li><a href="about.html">Our History</a></li>
+                    <li><a href="contact.html">Contact Sales</a></li>
+                    <li><a href="unique.html">Why Choose Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h4>Contact Info</h4>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Corporate Office: Ground floor, Shop No 20, Popular House Opp DSK Chintamany Complex, Kelkar
+                        Road, 638 Narayan Peth, Pune - 411030, Maharashtra, India.</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919876543210">Sales: +91 98765 43210</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-headset"></i>
+                    <a href="tel:+919988776655">Support: +91 99887 76655</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:alok@logicalhub.com">alok@logicalhub.com</a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-cta">
+                <h4>Ready to Optimize?</h4>
+                <p>Let our experts find the perfect printing solution for your business.</p>
+                <a href="contact.html" class="btn-footer-cta">Get a Consultation <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 SI FINTECH PVT LTD | Empowering Your Business with Technology | All Rights Reserved
+        </div>
+    </footer>
+
+    <div class="floating-support" id="floatingSupport">
+        <div class="support-options" role="menu" aria-hidden="true">
+            <a href="tel:+919876543210" class="support-option" role="menuitem">
+                <i class="fas fa-phone"></i>
+                <span>Call Sales</span>
+            </a>
+            <a href="tel:+919988776655" class="support-option" role="menuitem">
+                <i class="fas fa-headset"></i>
+                <span>Call Support</span>
+            </a>
+            <a href="https://wa.me/919370908324" class="support-option" target="_blank" rel="noopener" role="menuitem">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="malito:alok@logicalhub.com" class="support-option" role="menuitem">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+        <button class="support-icon" id="supportToggle" aria-expanded="false" aria-controls="supportOptions"
+            aria-label="Open support options">
+            <i class="fas fa-headset"></i>
+        </button>
+    </div>
+
+    <div class="back-to-top" id="backToTop" role="button" tabindex="0" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set active navigation link
+            const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            const links = document.querySelectorAll('nav a');
+            links.forEach(l => {
+                if (l.getAttribute('href') === currentPath) {
+                    // Remove active class from any other element (e.g. if page is index.html but another link was marked active)
+                    document.querySelector('nav a.active')?.classList.remove('active');
+                    l.classList.add('active');
+                }
+            });
+
+            // Back to Top Button Logic
+            const backToTopBtn = document.getElementById('backToTop');
+
+            // Function to handle scroll and set visibility
+            const toggleBackToTop = () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            };
+
+            window.addEventListener('scroll', toggleBackToTop);
+
+            // Handle click and keyboard enter for scrolling
+            const scrollToTop = () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            };
+
+            backToTopBtn.addEventListener('click', scrollToTop);
+            backToTopBtn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    scrollToTop();
+                }
+            });
+
+            // Floating Support Toggle Logic
+            const floatingSupport = document.getElementById('floatingSupport');
+            const supportToggle = document.getElementById('supportToggle');
+            const supportOptions = document.querySelector('.support-options');
+
+            if (supportToggle) {
+                supportToggle.addEventListener('click', () => {
+                    const isExpanded = supportToggle.getAttribute('aria-expanded') === 'true';
+                    supportToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+                    floatingSupport.classList.toggle('active');
+                    supportOptions.setAttribute('aria-hidden', isExpanded.toString());
+                    toggleBackToTop(); // Recalculate back to top position after options open/close
+                });
+            }
+
+            // Animated Counter for Stats
+            const statNumbers = document.querySelectorAll('.hero-stat-number');
+
+            function animateCounter(element) {
+                const rawText = element.textContent;
+                const target = parseInt(rawText.replace(/[^\d]/g, ''));
+                const suffix = rawText.replace(/[0-9]/g, '');
+                const duration = 1200;
+                const step = Math.max(1, Math.ceil(target / (duration / 16)));
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        element.textContent = target + suffix;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current) + suffix;
+                    }
+                }, 16);
+            }
+
+            // Intersection Observer for stats animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statNumbers.forEach(stat => {
+                observer.observe(stat);
+            });
+        });
+        // Add this carousel logic inside the existing 'document.addEventListener('DOMContentLoaded', () => { ... });'
+
+        // Testimonials Carousel Logic
+        const wrapper = document.getElementById('testimonialWrapper');
+        const dotsContainer = document.getElementById('carouselDots');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+        let slideInterval;
+        const slideDuration = 6000; // 6 seconds for auto-slide
+
+        // Function to move the carousel
+        function goToSlide(index) {
+            if (index < 0) {
+                index = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                index = 0;
+            }
+            currentIndex = index;
+            const offset = -currentIndex * 100 / totalSlides;
+            wrapper.style.transform = `translateX(${offset}%)`;
+            updateDots();
+        }
+
+        // Function to generate and update dots
+        function updateDots() {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (i === currentIndex) {
+                    dot.classList.add('active');
+                }
+                dot.addEventListener('click', () => {
+                    resetInterval();
+                    goToSlide(i);
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        // Auto-slide function
+        function startInterval() {
+            slideInterval = setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, slideDuration);
+        }
+
+        // Reset interval on manual interaction
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startInterval();
+        }
+
+        // Initialize the carousel
+        if (totalSlides > 1) {
+            updateDots();
+            startInterval();
+        }
+    </script>
+</body>
+
+</html>

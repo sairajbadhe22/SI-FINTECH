@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us - SI FINTECH PVT LTD</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =======================================
+           Global/Design Variables (Updated Professional Palette)
+           ======================================= */
+        :root {
+            --primary-blue: #0078D4;
+            /* Deep HP/Microsoft Blue (Action, Focus) - KEEPING HEADER COLORS */
+            --secondary-navy: #0B2B4A;
+            /* Dark Navy (Headings, Footer, Authority) - KEEPING HEADER COLORS */
+            --accent-sky: #2FB8FF;
+            /* Bright Sky Blue (Hover, Highlight) - KEEPING HEADER COLORS */
+            --accent-red: #e63946;
+            /* Added for support link consistency */
+
+            /* NEW PROFESSIONAL COLOR SYSTEM */
+            --corporate-gray-900: #1a202c;
+            /* Dark charcoal for headings */
+            --corporate-gray-700: #2d3748;
+            /* Medium charcoal for subheadings */
+            --corporate-gray-500: #718096;
+            /* Medium gray for body text */
+            --corporate-gray-300: #e2e8f0;
+            /* Light gray for backgrounds */
+            --corporate-gray-100: #f7fafc;
+            /* Very light gray for card backgrounds */
+           
+            --accent-slate: #4a5568;
+            /* Slate for borders and subtle elements */
+            --accent-teal: #319795;
+            /* Professional teal for highlights */
+            --accent-indigo: #5a67d8;
+            /* Professional indigo for CTAs */
+            --accent-amber: #d69e2e;
+            /* Warm amber for accents */
+
+            --shadow-subtle: 0 4px 6px rgba(0, 0, 0, 0.03);
+            --shadow-card: 0 8px 15px rgba(0, 0, 0, 0.05);
+            --header-gradient: linear-gradient(45deg, #121521, #38476b, #b6192e, #ffc1ac);
+            /* KEEPING HEADER GRADIENT */
+            --text-color: var(--text-dark);
+        }
+
+        /* Base and Layout Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--corporate-gray-700);
+            line-height: 1.6;
+            background: var(--corporate-gray-100);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-indigo);
+            transition: color 0.2s;
+        }
+
+        /* ---------------------------------------
+           Header and Navigation (Updated for consistency)
+           --------------------------------------- */
+        header {
+            background: var(--header-gradient);
+            color: white;
+            padding: 15px 25px;
+            /* Reduced padding for compact look */
+            border-bottom: 4px solid var(--primary-blue);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 55px;
+            /* Reduced logo size */
+
+            width: auto;
+        }
+
+        .header-content h1 {
+            font-size: 1.5rem;
+            /* Reduced font size */
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            /* Reduced gap */
+            align-items: flex-end;
+            font-size: 0.85rem;
+            /* Reduced font size */
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            /* Changed to white for better contrast with dark header */
+            transition: color 0.2s;
+        }
+
+        .contact-info a {
+            color: inherit;
+            font-size: 0.95rem;
+            /* Reduced font size */
+            font-weight: 500;
+        }
+
+        .contact-info i {
+            font-size: 1.2rem;
+            color: var(--accent-sky);
+            /* Use accent color for icons */
+        }
+
+        .contact-info:hover {
+            color: var(--primary-blue);
+        }
+
+
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 40px;
+            overflow-x: auto;
+        }
+
+        nav a {
+            padding: 12px 0;
+            /* Reduced padding */
+            font-size: 1rem;
+            /* Reduced font size */
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.2s, border-bottom 0.2s;
+            border-bottom: 3px solid transparent;
+            /* Reduced border thickness */
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+            border-bottom-color: var(--accent-sky);
+        }
+
+        nav a.active {
+            color: var(--primary-blue);
+            border-bottom-color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .support-link {
+            margin-left: auto;
+            background: var(--accent-red);
+            padding: 8px 15px !important;
+            border-radius: 6px;
+            border-bottom: none !important;
+            font-weight: 600;
+            align-self: center;
+            /* Align with nav links */
+            color: white !important;
+        }
+
+        .support-link:hover {
+            background: #c1121f;
+            color: white !important;
+            transform: translateY(-1px);
+        }
+
+        /* ---------------------------------------
+           Floating Support & Back to Top (Added)
+           --------------------------------------- */
+        .floating-support {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .support-icon-float {
+            border: none;
+            width: 55px;
+            height: 55px;
+            background: var(--accent-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.4rem;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        .support-icon-float:hover {
+            transform: scale(1.05);
+        }
+
+        .support-options {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            padding: 10px;
+            display: none;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 160px;
+        }
+
+        .floating-support.active .support-options {
+            display: flex;
+        }
+
+        .support-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            border-radius: 4px;
+            color: var(--secondary-navy);
+            font-weight: 500;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .support-option:hover {
+            background: var(--corporate-gray-300);
+        }
+
+        .support-option i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            bottom: 90px;
+        }
+
+        .floating-support.active+.back-to-top.visible {
+            bottom: 200px;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary-navy);
+            transform: translateY(-2px);
+        }
+
+        /* ---------------------------------------
+           Main Content Area (UPDATED COLORS)
+           --------------------------------------- */
+        .about-container {
+            max-width: 1280px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex-grow: 1;
+        }
+
+        /* Hero Section */
+        .about-hero {
+            background: var(--corporate-gray-900);
+            color: #fff;
+            padding: 60px 20px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            border-top: 5px solid var(--accent-indigo);
+        }
+
+        .about-hero img {
+            height: 80px;
+            margin: 15px 0 20px;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+
+        .about-hero h2 {
+            font-size: 3rem;
+            margin: 0 0 5px;
+            font-weight: 700;
+            color: var(--accent-teal);
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* General Content Sections */
+        .content-block {
+            padding: 30px;
+            margin-bottom: 30px;
+            background: var(--corporate-gray-100);
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .content-block h3 {
+            font-size: 2rem;
+            color: var(--corporate-gray-900);
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .content-block h3::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: var(--accent-indigo);
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Story Section with Image */
+        .story-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: justify;
+            color: var(--corporate-gray-700);
+        }
+
+        .about-image {
+            float: right;
+            margin: 0 0 20px 30px;
+            width: 45%;
+            max-width: 450px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-card);
+            object-fit: cover;
+        }
+
+        .story-section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Locations and Warehouse Section */
+        .warehouse img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto 30px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px 30px;
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .locations-grid li {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--corporate-gray-700);
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .locations-grid li::before {
+            content: "📍";
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        /* Mission & Values */
+        .mission-values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .value-card {
+            padding: 30px;
+            border-radius: 10px;
+            background: var(--corporate-gray-100);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid var(--accent-indigo);
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .value-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(90, 103, 216, 0.1);
+        }
+
+        .value-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--accent-indigo);
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: var(--corporate-gray-500);
+            font-size: 0.95rem;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            flex: 1 1 280px;
+            background: var(--corporate-gray-100);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .service-card:hover {
+            background: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .service-icon img {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+
+        .service-card strong {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--corporate-gray-900);
+            margin-bottom: 8px;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--corporate-gray-500);
+        }
+
+        /* Testimonials */
+        .testimonials h3 {
+            color: var(--accent-indigo);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--corporate-gray-100);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-subtle);
+            font-style: italic;
+            transition: 0.3s;
+            border: 1px solid var(--corporate-gray-300);
+            color: var(--corporate-gray-500);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-indigo);
+        }
+
+        .testimonial-card strong {
+            display: block;
+            font-size: 1rem;
+            margin-top: 15px;
+            color: var(--corporate-gray-900);
+            font-style: normal;
+        }
+
+        /* Customer List */
+        .Existing-customers {
+            padding: 30px;
+            background: var(--corporate-gray-100);
+            border-radius: 12px;
+            box-shadow: var(--shadow-card);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--accent-teal);
+        }
+
+        .Existing-customers h3 {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: var(--accent-indigo);
+            margin-bottom: 20px;
+        }
+
+        .Existing-customers .customer-icon {
+            height: 40px;
+            width: auto;
+            margin-right: 15px;
+            filter: grayscale(100%);
+        }
+
+        .Existing-customers ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .Existing-customers li {
+            font-size: 0.95rem;
+            color: var(--corporate-gray-700);
+            border-bottom: 1px dashed var(--corporate-gray-300);
+            padding-bottom: 5px;
+        }
+
+        /* Brochure Download Section */
+        .brochure-download {
+            background: var(--accent-indigo);
+            color: white;
+            padding: 30px 25px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .brochure-download h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .brochure-download p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .brochure-download .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--corporate-gray-900);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .brochure-download .btn-download i {
+            font-size: 1.1rem;
+        }
+
+        .brochure-download .btn-download:hover {
+            background: var(--corporate-gray-700);
+            transform: translateY(-2px);
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: var(--corporate-gray-900);
+            color: #fff;
+            padding: 50px 25px;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--accent-indigo);
+        }
+
+        .cta-banner h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--accent-teal);
+        }
+
+        .cta-banner a {
+            display: inline-block;
+            background: var(--accent-indigo);
+            color: #fff;
+            padding: 13px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(90, 103, 216, 0.3);
+        }
+
+        .cta-banner a:hover {
+            background: var(--accent-teal);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(49, 151, 149, 0.4);
+        }
+
+        /* NEW SECTIONS - ADDED PROFESSIONAL FEATURES */
+
+        /* Leadership Team Section */
+        .leadership-team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            background: var(--corporate-gray-100);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-photo {
+            height: 200px;
+            width: 100%;
+            background-color: var(--corporate-gray-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--corporate-gray-500);
+            font-size: 4rem;
+        }
+
+        .member-info {
+            padding: 20px;
+        }
+
+        .member-info h4 {
+            color: var(--corporate-gray-900);
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .member-info .position {
+            color: var(--accent-indigo);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .member-info p {
+            color: var(--corporate-gray-500);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--accent-indigo);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--shadow-card);
+            border-left: 4px solid var(--accent-indigo);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            border-left: none;
+            border-right: 4px solid var(--accent-indigo);
+        }
+
+        .timeline-year {
+            font-weight: 700;
+            color: var(--accent-indigo);
+            margin-bottom: 5px;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: white;
+            border: 4px solid var(--accent-indigo);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .certification-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .certification-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-logo {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: var(--accent-indigo);
+            font-size: 2.5rem;
+        }
+
+        .certification-item h4 {
+            color: var(--corporate-gray-900);
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .certification-item p {
+            color: var(--corporate-gray-500);
+            font-size: 0.85rem;
+        }
+
+        /* Awards Section */
+        .awards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .award-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .award-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .award-icon {
+            font-size: 2.5rem;
+            color: var(--accent-amber);
+            margin-bottom: 15px;
+        }
+
+        .award-card h4 {
+            color: var(--corporate-gray-900);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .award-card p {
+            color: var(--corporate-gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* Sustainability Section */
+        .sustainability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .sustainability-item {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .sustainability-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .sustainability-icon {
+            font-size: 2.5rem;
+            color: rgb(27, 167, 27);
+            margin-bottom: 15px;
+        }
+
+        .sustainability-item h4 {
+            color: var(--corporate-gray-900);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .sustainability-item p {
+            color: var(--corporate-gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* Quality Assurance Section */
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .quality-item {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .quality-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .quality-icon {
+            font-size: 2.5rem;
+            color: var(--accent-indigo);
+            margin-bottom: 15px;
+        }
+
+        .quality-item h4 {
+            color: var(--corporate-gray-900);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .quality-item p {
+            color: var(--corporate-gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* Enhanced Testimonials */
+        .enhanced-testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .enhanced-testimonial {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--corporate-gray-300);
+        }
+
+        .enhanced-testimonial:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .client-logo {
+            width: 60px;
+            height: 60px;
+            background-color: var(--corporate-gray-300);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--corporate-gray-500);
+            font-size: 1.5rem;
+        }
+
+        .client-info h4 {
+            color: var(--corporate-gray-900);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .client-info p {
+            color: var(--corporate-gray-500);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-rating {
+            color: var(--accent-amber);
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text {
+            color: var(--corporate-gray-700);
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        /* ---------------------------------------
+           Footer (Updated with new color system)
+           --------------------------------------- */
+        .main-footer {
+            background: var(--corporate-gray-900);
+            color: #aebecd;
+            padding: 60px 20px 0;
+            font-size: 0.95rem;
+            border-top: 4px solid var(--accent-indigo);
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-column h4 {
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent-indigo);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .footer-column p {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a,
+        .footer-contact a {
+            color: #aebecd;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover,
+        .footer-contact a:hover {
+            color: var(--accent-teal);
+        }
+
+        .footer-contact i {
+            color: var(--accent-indigo);
+            margin-right: 10px;
+            width: 15px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-teal);
+        }
+
+        .btn-footer-cta {
+            display: inline-block;
+            background-color: var(--accent-indigo);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn-footer-cta:hover {
+            background-color: var(--accent-teal);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 20px;
+            font-size: 0.85rem;
+            color: #889aad;
+        }
+
+        /* ---------------------------------------
+           Responsive Design
+           --------------------------------------- */
+        @media (max-width: 1200px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-image {
+                float: none;
+                width: 100%;
+                margin: 0 0 20px 0;
+                max-width: 100%;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .header-content h1 {
+                font-size: 1.7rem;
+            }
+
+            .header-contact {
+                width: 100%;
+                align-items: flex-start;
+                margin-top: 15px;
+            }
+
+            /* Timeline Responsive */
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+
+            .timeline-item::after {
+                left: 18px;
+            }
+
+            .timeline-item:nth-child(even)::after {
+                left: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .logo img {
+                height: 50px;
+                margin-top: 0;
+            }
+
+            .nav-container {
+                gap: 20px;
+            }
+
+            .about-hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .about-hero p {
+                font-size: 1rem;
+            }
+
+            .content-block h3 {
+                font-size: 1.7rem;
+            }
+
+            .content-block {
+                padding: 20px;
+            }
+
+            .services-grid {
+                gap: 15px;
+            }
+
+            .Existing-customers ul {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-col h4 {
+                margin: 0 auto 20px;
+            }
+
+            .footer-contact-item {
+                justify-content: center;
+            }
+
+            .social-icons {
+                text-align: center;
+            }
+
+            .brochure-download .btn-download {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="SI FINTECH LTD Logo Design.png" alt="SI Fintech Logo">
+                </div>
+                <h1>SI FINTECH PVT LTD</h1>
+            </div>
+            <div class="header-contact">
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919876543210">Sales: +91 98765 43210</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-headset"></i>
+                    <a href="tel:+919988776655">Support: +91 99887 76655</a>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:alok@logicalhub.com">alok@logicalhub.com</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="unique.html">Why Choose Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="support.html" class="support-link"><i class="fas fa-headset"></i> Support</a>
+        </div>
+    </nav>
+
+    <div class="about-container">
+
+        <section class="about-hero">
+            <h2>ABOUT SI FINTECH PVT LTD</h2>
+            <img src="SI FINTECH LTD Logo Design.png" alt="SI Fintech Logo">
+            <p>Your trusted partner for professional printing solutions, delivering reliability, efficiency, and
+                support since 1998.</p>
+        </section>
+
+        <section class="content-block story-section">
+            <h3>Our Story</h3>
+            <img src="about-page-photos/about1.png" alt="High quality printing" class="about-image">
+            <p><b>SI FINTECH PVT LTD</b> is a leading provider of professional printing solutions for businesses and
+                individuals. With a focus on <b>reliability, efficiency, and exceptional customer support</b>. SI
+                Fintech
+                Pvt. Ltd. is an authorized HP sales & service partner for printers, scanners, plotters, copiers, and
+                consumables. We have been providing <b>ValuPrint (Managed Printing Services)</b>—an opportunity to
+                reduce
+                cost, headaches, and electricity consumption—across the country since <b>1998</b>.</p>
+            <p>We were among the pioneers who started the Managed Printing Services industry in India. We proudly
+                provide services to our customers across the country in locations ranging from Tezpur in the North East
+                to Jamnagar in the West, and from Pathankot in the North to Kanyakumari in the South. We serve clients
+                in very tough, remote, and demanding locations like Mines (Ghatotand, Noamundi, etc.) and Plant Cities
+                (Bhadravati, Burnpur, etc.), ensuring <b>unparalleled business continuity.</b></p>
+        </section>
+       
+        <section class="content-block">
+            <h3>Our Leadership Team</h3>
+            <div class="leadership-team">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Alok Dugar</h4>
+                        <div class="position">Founder & CEO</div>
+                        <p>With over 25 years of experience in the printing industry, Alok Sir has pioneered managed
+                            printing services in India and built SI FINTECH into a nationally recognized brand.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Pramod saini</h4>
+                        <div class="position">Chief Operations Officer</div>
+                        <p>Pramod Sir oversees our nationwide service network, ensuring seamless operations and
+                            exceptional customer experience across all 80+ locations.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Jitendra Mahajan </h4>
+                        <div class="position">Technical Director</div>
+                        <p>Jitendra Sir leads our technical team, driving innovation in printing solutions and ensuring
+                            our clients benefit from the latest HP technologies.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Sujay Jadhav </h4>
+                        <div class="position">Their position</div>
+                        <p>Their information</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">                        
+                        <h4>Neeta Mam </h4>
+                        <div class="position">position-info</div>
+                        <p>Work Info</p>
+                    
+                    </div>
+                </div>
+               <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Namrata Mam</h4>
+                        <div class="position">postition-info</div>
+                        <p>their-info</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Employee-7</h4>
+                        <div class="position">position-info</div>
+                        <p>their-info</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Employee-8</h4>
+                        <div class="position">position-info</div>
+                        <p>their-info</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Employee-9</h4>
+                        <div class="position">position-info</div>
+                        <p>their-info</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-block">
+            <h3>Our Journey & Milestones</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1998</div>
+                        <p>Founded SI FINTECH PVT LTD with a vision to revolutionize printing services in India</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2003</div>
+                        <p>Became an authorized HP partner, expanding our service portfolio</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2008</div>
+                        <p>Launched ValuPrint - India's first comprehensive Managed Printing Service</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <p>Expanded service network to 50+ cities across India</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <p>Reached 80+ service locations and 500+ corporate clients nationwide</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <p>Achieved HP Platinum Partner status, the highest certification level</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block warehouse">
+            <h3>Our Locations & Service Network</h3>
+            <img src="about-page-photos/Our Warehouses.png" alt="India map" class="warehouse-map">
+            <p style="text-align:center; color: var(--accent-indigo); font-weight: 600;">We offer reliable, on-site
+                support in 80+ cities across India.</p>
+            <ul class="locations-grid">
+                <li><strong>Agra</strong></li>
+                <li><strong>Ahmedabad</strong></li>
+                <li><strong>Ahmednagar</strong></li>
+                <li><strong>Allahabad</strong></li>
+                <li><strong>Amritsar</strong></li>
+                <li><strong>Angul</strong></li>
+                <li><strong>Aurangabad</strong></li>
+                <li><strong>Balasore</strong></li>
+                <li><strong>Bangalore</strong></li>
+                <li><strong>Baroda</strong></li>
+                <li><strong>Belgaum</strong></li>
+                <li><strong>Bellary</strong></li>
+                <li><strong>Bhadravati</strong></li>
+                <li><strong>Bhilwara</strong></li>
+                <li><strong>Bhiwandi</strong></li>
+                <li><strong>Bhopal</strong></li>
+                <li><strong>Bilaspur</strong></li>
+                <li><strong>Bokaro</strong></li>
+                <li><strong>Bolangir</strong></li>
+                <li><strong>Chandigarh</strong></li>
+                <li><strong>Chandrapur</strong></li>
+                <li><strong>Chennai</strong></li>
+                <li><strong>Cuttack</strong></li>
+                <li><strong>Delhi</strong></li>
+                <li><strong>Dhanbad</strong></li>
+                <li><strong>Durg</strong></li>
+                <li><strong>Durgapur</strong></li>
+                <li><strong>Faridabad</strong></li>
+                <li><strong>Ghaziabad</strong></li>
+                <li><strong>Ghatotand</strong></li>
+                <li><strong>Goa</strong></li>
+                <li><strong>Gurgaon</strong></li>
+                <li><strong>Guwahati</strong></li>
+                <li><strong>Gwalior</strong></li>
+                <li><strong>Hospet</strong></li>
+                <li><strong>Hubli</strong></li>
+                <li><strong>Hyderabad</strong></li>
+                <li><strong>Indore</strong></li>
+                <li><strong>Jabalpur</strong></li>
+                <li><strong>Jaipur</strong></li>
+                <li><strong>Jamshedpur</strong></li>
+                <li><strong>Jorhat</strong></li>
+                <li><strong>Kanpur</strong></li>
+                <li><strong>Katni</strong></li>
+                <li><strong>Khopoli</strong></li>
+                <li><strong>Kochi</strong></li>
+                <li><strong>Kolkata</strong></li>
+                <li><strong>Kota</strong></li>
+                <li><strong>Lucknow</strong></li>
+                <li><strong>Madurai</strong></li>
+                <li><strong>Mahad</strong></li>
+                <li><strong>Malda</strong></li>
+                <li><strong>Mangalore</strong></li>
+                <li><strong>Mumbai</strong></li>
+                <li><strong>Nagpur</strong></li>
+                <li><strong>Nashik</strong></li>
+                <li><strong>Nellore</strong></li>
+                <li><strong>Noamundi</strong></li>
+                <li><strong>Noida</strong></li>
+                <li><strong>Pantnagar</strong></li>
+                <li><strong>Pathankot</strong></li>
+                <li><strong>Patalganga</strong></li>
+                <li><strong>Patna</strong></li>
+                <li><strong>Pune</strong></li>
+                <li><strong>Raipur</strong></li>
+                <li><strong>Rampurhat</strong></li>
+                <li><strong>Ranchi</strong></li>
+                <li><strong>Ratlam</strong></li>
+                <li><strong>Rourkela</strong></li>
+                <li><strong>Sikkim</strong></li>
+                <li><strong>Siliguri</strong></li>
+                <li><strong>Solapur</strong></li>
+                <li><strong>Surat</strong></li>
+                <li><strong>Talcher</strong></li>
+                <li><strong>Tirunelveli</strong></li>
+                <li><strong>Tirupati</strong></li>
+                <li><strong>Varanasi</strong></li>
+                <li><strong>Vijayawada</strong></li>
+                <li><strong>Vizag</strong></li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h3>Certifications & Partnerships</h3>
+            <div class="certifications-grid">
+                <div class="certification-item">
+                    <div class="cert-logo">
+                        <i class="fab fa-hp"></i>
+                    </div>
+                    <h4>HP Platinum Partner</h4>
+                    <p>Highest level of partnership with HP</p>
+                </div>
+                <div class="certification-item">
+                    <div class="cert-logo">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>ISO 9001:2015</h4>
+                    <p>Quality Management System Certified</p>
+                </div>
+                <div class="certification-item">
+                    <div class="cert-logo">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Green Partner</h4>
+                    <p>Environmental responsibility certified</p>
+                </div>
+                <div class="certification-item">
+                    <div class="cert-logo">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Data Security Certified</h4>
+                    <p>Ensuring client data protection</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block">
+            <h3>Industry Recognition & Awards</h3>
+            <div class="awards-container">
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>Best Printing Solutions Provider 2022</h4>
+                    <p>Awarded by Indian Business Excellence Forum</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h4>Customer Service Excellence</h4>
+                    <p>Recognized for outstanding client support</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>HP Partner of the Year 2021</h4>
+                    <p>Top performing HP partner in India</p>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h4>Innovation in MPS 2020</h4>
+                    <p>Pioneering Managed Print Services in India</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-values-container">
+            <div class="value-card">
+                <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
+                <p>To empower businesses and individuals with <b>top-tier printing technology</b> and unparalleled
+                    support
+                    across India.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="fas fa-eye"></i> Our Vision</h4>
+                <p>To be the leading name in professional printing solutions through <b>innovation, reliability</b> ,
+                    and
+                    customer-centric service.</p>
+            </div>
+            <div class="value-card">
+                <h4><i class="fas fa-handshake"></i> Our Values</h4>
+                <p><b>Integrity, quality, commitment</b> , and a focus on minimizing environmental impact and maximizing
+                    customer success.</p>
+            </div>
+        </section>
+
+        <section class="content-block">
+            <h3>Our Sustainability Commitment</h3>
+            <div class="sustainability-grid">
+                <div class="sustainability-item">
+                    <div class="sustainability-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h4>Cartridge Recycling</h4>
+                    <p>Comprehensive recycling program for used printer cartridges to minimize environmental impact</p>
+                </div>
+                <div class="sustainability-item">
+                    <div class="sustainability-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Energy Efficient Solutions</h4>
+                    <p>Promoting HP's energy-efficient printers that reduce electricity consumption by up to 50%</p>
+                </div>
+                <div class="sustainability-item">
+                    <div class="sustainability-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4>Optimized Logistics</h4>
+                    <p>Route optimization for service calls and deliveries to reduce carbon footprint</p>
+                </div>
+                <div class="sustainability-item">
+                    <div class="sustainability-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h4>Paper Reduction</h4>
+                    <p>Digital workflows and document management solutions to minimize paper usage</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-block">
+            <h3>Quality Assurance & Standards</h3>
+            <div class="quality-grid">
+                <div class="quality-item">
+                    <div class="quality-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h4>Rigorous Testing</h4>
+                    <p>All equipment undergoes comprehensive testing before deployment to ensure optimal performance</p>
+                </div>
+                <div class="quality-item">
+                    <div class="quality-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4>Certified Technicians</h4>
+                    <p>Our service team consists of HP-certified technicians with regular training updates</p>
+                </div>
+                <div class="quality-item">
+                    <div class="quality-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Performance Monitoring</h4>
+                    <p>Continuous monitoring of device performance and proactive maintenance scheduling</p>
+                </div>
+                <div class="quality-item">
+                    <div class="quality-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Round-the-clock technical support with guaranteed response times for critical issues</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block">
+            <h3>Our Core Services</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><img src="about-page-photos/sales-icon.png" alt="Sales Icon"></div>
+                    <strong>Sales & Installation</strong>
+                    <p>Expert Advice, fast setup, and user training for your new HP devices.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="about-page-photos/maintenance-icon.png" alt="Maintenance Icon">
+                    </div>
+                    <strong>Managed Services (ValuPrint)</strong>
+                    <p>Proactive maintenance, repairs, and supply management to ensure zero downtime.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><img src="about-page-photos/supplies-icon.png" alt="Supplies Icon"></div>
+                    <strong>Genuine Supplies</strong>
+                    <p>Authentic HP toner, ink, and consumables with flexible delivery options.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block testimonials">
+            <h3>What Our Esteemed Clients Say</h3>
+            <div class="enhanced-testimonials">
+                <div class="enhanced-testimonial">
+                    <div class="testimonial-header">
+                        <div class="client-logo">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="client-info">
+                            <h4>TechCorp Pvt Ltd</h4>
+                            <p>IT Services Company</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "SI FINTECH PVT LTD transformed our office printing – reliable, fast, and excellent support! Their
+                        managed services have reduced our printing costs by 40%."
+                    </div>
+                </div>
+                <div class="enhanced-testimonial">
+                    <div class="testimonial-header">
+                        <div class="client-logo">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="client-info">
+                            <h4>Global Solutions</h4>
+                            <p>Manufacturing Conglomerate</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "Best experience ever. Quick service and genuine supplies every time. Their nationwide network
+                        ensures we get consistent service across all our locations."
+                    </div>
+                </div>
+                <div class="enhanced-testimonial">
+                    <div class="testimonial-header">
+                        <div class="client-logo">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="client-info">
+                            <h4>Innovate Systems</h4>
+                            <p>Software Development Firm</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-text">
+                        "Highly recommend them for any business that values efficiency. Their proactive maintenance has
+                        eliminated all our printer downtime issues."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="Existing-customers">
+            <h3>
+                <img src="about-page-photos/Customer-removebg-preview.png" alt="Customer-logo" class="customer-icon">
+                List of Some Of Our Existing Customers
+            </h3>
+            <ul>
+                <li><strong>ANT Associates (Architect)</strong></li>
+                <li><strong>Avery Dennison Pvt Ltd,.(Label Manufacturer)</strong></li>
+                <li><strong>Bennett Coleman & Co (News Paper – Times of India)</strong></li>
+                <li><strong>Cilicant Chem Pvt Ltd (Industrial Chemicals)</strong></li>
+                <li><strong>Cipla Ltd., (Pharmaceutical)</strong></li>
+                <li><strong>Ethix Realtors (Real Estate)</strong></li>
+                <li><strong>Hemant Sahai & Associates (Law firm)</strong></li>
+                <li><strong>Khaitan & Co. (Law firm)</strong></li>
+                <li><strong>Kimaya Associates (Architects)</strong></li>
+                <li><strong>Kumar Promoters (Real Estate)</strong></li>
+                <li><strong>Marriott Group of Hotels (JW Marriott, Courtyard by Marriott etc)</strong></li>
+                <li><strong>Oetiker (Manufacturing)</strong></li>
+                <li><strong>Piramal Pharma Ltd., (Pharmaceutical)</strong></li>
+                <li><strong>Precision Power Products (Manufacturing)</strong></li>
+                <li><strong>Quafra Design (Architects)</strong></li>
+                <li><strong>R K Dewan & Co (Law firm)</strong></li>
+                <li><strong>Safeguard Global (HR Services)</strong></li>
+                <li><strong>Shree Khairnar Construction Pvt Ltd (Real Estate)</strong></li>
+                <li><strong>SKP Group(Audit)</strong></li>
+                <li><strong>SPCM (Audit)</strong></li>
+                <li><strong>Tata Motors (Automobile)</strong></li>
+                <li><strong>Tata Steel Distribution & Processing Ltd (Steel)</strong></li>
+                <li><strong>TKM Global Logistics (Logistics)</strong></li>
+                <li><strong>TMIL (Clearing & Forwarding)</strong></li>
+                <li><strong>Veritas Legal (Law firm)</strong></li>
+            </ul>
+        </div>
+
+        <section class="brochure-download">
+            <h3>Download Our Company Brochure</h3>
+            <p>Get a comprehensive overview of our <b>Managed Services, Authorized HP products</b> , and nationwide
+                support network.</p>
+            <a href="#" class="btn-download" download="SIFintechprofile2025+(1).pdf">
+                <i class="fas fa-file-pdf"></i> Download PDF Now!
+            </a>
+        </section>
+        <section class="cta-banner">
+            <h3>Ready to Partner with a Printing Pioneer?</h3>
+            <p>Contact us today to explore our products & services tailored for your unique business needs.</p>
+            <a href="contact.html">Get in Touch</a>
+        </section>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <h4>SI FINTECH PVT LTD</h4>
+                <p>
+                    <b>Authorized HP Commercial Partner since 1998, providing sales, service, and Managed printing
+                        solutions
+                        (MPS) across India.</b>
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="products.html">Product Catalogue</a></li>
+                    <li><a href="services.html">Managed Services</a></li>
+                    <li><a href="about.html">Our History</a></li>
+                    <li><a href="contact.html">Contact Sales</a></li>
+                    <li><a href="unique.html">Why Choose Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-contact">
+                <h4>Contact Info</h4>
+                <div class="footer-contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Corporate Office: Ground floor, Shop No 20, Popular House Opp DSK Chintamany Complex, Kelkar
+                        Road, 638 Narayan Peth, Pune - 411030, Maharashtra, India.</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919876543210">Sales: +91 98765 43210</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-headset"></i>
+                    <a href="tel:+919988776655">Support: +91 99887 76655</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/919876543210">WhatsApp: +91 98765 43210</a>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:alok@logicalhub.com">alok@logicalhub.com</a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-cta">
+                <h4>Ready to Optimize?</h4>
+                <p>Let our experts find the perfect printing solution for your business.</p>
+                <a href="contact.html" class="btn-footer-cta">Get a Consultation</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 SI FINTECH PVT LTD | Empowering Your Business with Technology | All Rights Reserved | Developed By Sairajbadhe24@gmail.com
+        </div>
+    </footer>
+
+    <div class="floating-support" id="floatingSupport">
+        <div class="support-options" role="menu" aria-hidden="true">
+            <a href="tel:+919876543210" class="support-option" role="menuitem">
+                <i class="fas fa-phone"></i>
+                <span>Call Sales</span>
+            </a>
+            <a href="tel:+919988776655" class="support-option" role="menuitem">
+                <i class="fas fa-headset"></i>
+                <span>Call Support</span>
+            </a>
+            <a href="https://wa.me/919370908324" class="support-option" target="_blank" rel="noopener" role="menuitem">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+            <a href="mailto:alok@logicalhub.com" class="support-option" role="menuitem">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+        <button class="support-icon-float" id="supportToggle" aria-expanded="false" aria-controls="supportOptions"
+            aria-label="Open support options">
+            <i class="fas fa-headset"></i>
+        </button>
+    </div>
+
+    <div class="back-to-top" id="backToTop" role="button" tabindex="0" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPath = window.location.pathname.split("/").pop();
+            const links = document.querySelectorAll("nav a");
+            links.forEach(link => {
+                const linkHref = link.getAttribute("href");
+                if (linkHref === currentPath || (currentPath === "" && linkHref === "index.html") || (currentPath === "about.html" && linkHref === "about.html")) {
+                    link.classList.add("active");
+                }
+            });
+
+            // Floating Support Toggle Logic
+            const floatingSupport = document.getElementById('floatingSupport');
+            const supportToggle = document.getElementById('supportToggle');
+            const supportOptions = document.querySelector('.support-options');
+            const backToTopBtn = document.getElementById('backToTop');
+
+            // Function to handle scroll and set visibility
+            const toggleBackToTop = () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            };
+
+            window.addEventListener('scroll', toggleBackToTop);
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+
+            if (supportToggle) {
+                supportToggle.addEventListener('click', () => {
+                    const isExpanded = supportToggle.getAttribute('aria-expanded') === 'true';
+                    supportToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+                    floatingSupport.classList.toggle('active');
+                    supportOptions.setAttribute('aria-hidden', isExpanded.toString());
+                    toggleBackToTop(); // Recalculate back to top position after options open/close
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
