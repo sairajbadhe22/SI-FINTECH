@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://si-fintech.vercel.app//sitemap.xml
