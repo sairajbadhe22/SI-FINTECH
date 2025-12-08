@@ -1,38 +1,39 @@
 /* ----------------------------------------------------
-   GLOBAL RESPONSIVE FIXES (applies to all pages)
+   OPTIMIZED GLOBAL RESPONSIVE FIXES (applies to all pages)
 ---------------------------------------------------- */
 
-/* Make all images responsive */
+/* Ensure smooth scrolling and fast rendering */
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Base element scaling and font smoothing */
+body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make all images responsive, preventing horizontal overflow */
 img {
     max-width: 100%;
     height: auto;
+    display: block; /* Helps with layout consistency */
 }
 
-/* Fix container overflow on small screens */
-section, .page-container {
+/* Fix container padding on small screens (ensuring content touches edges on very small devices) */
+section, .page-container, .main-container {
     padding-left: 15px !important;
     padding-right: 15px !important;
 }
 
-/* Mobile NAVIGATION FIX */
+/* ----------------------------------------------------
+   MOBILE LAYOUT (Max Width 768px - Tablet/Large Phone)
+---------------------------------------------------- */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-wrap: wrap;
-        gap: 15px !important;
-        justify-content: center !important;
-        padding: 10px 0 !important;
-    }
-
-    nav a {
-        font-size: 0.9rem !important;
-        padding: 8px 5px !important;
-    }
-
-    .support-link {
-        padding: 6px 12px !important;
-        font-size: 0.85rem !important;
-    }
-
+    /* --- HEADER & NAVIGATION --- */
     header .header-content,
     header .header-container {
         flex-direction: column !important;
@@ -43,164 +44,118 @@ section, .page-container {
     .header-contact {
         align-items: center !important;
     }
-}
-
-/* ----------------------------------------------------
-   HOMEPAGE RESPONSIVE FIXES
----------------------------------------------------- */
-
-@media (max-width: 768px) {
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 10px !important;
+    
+    .logo img {
+        height: 45px !important; /* Smaller logo */
     }
 
-    .hero-text h1 {
-        font-size: 1.8rem !important;
-        line-height: 1.2 !important;
+    header h1 {
+        font-size: 1.4rem !important;
     }
 
-    .hero-text p {
-        font-size: 1rem !important;
+    .nav-container {
+        /* Force single line scrolling navigation */
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 10px 15px !important; /* Adjust padding for better look */
+        gap: 15px !important;
     }
 
-    .hero-product {
-        max-width: 70% !important;
-        margin: 20px auto !important;
+    nav a {
+        font-size: 0.9rem !important;
+        padding: 8px 10px !important;
+        flex-shrink: 0; /* Prevent links from shrinking */
     }
 
+    .support-link {
+        padding: 6px 12px !important;
+        font-size: 0.85rem !important;
+        margin-left: 0 !important; /* Remove auto-margin on mobile nav */
+        flex-shrink: 0;
+    }
+
+    /* --- FONT SCALING --- */
+    h1 { font-size: 2rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.4rem !important; }
+    p, li, td, th { font-size: 0.95rem !important; }
+
+    /* --- COMPONENT STACKING --- */
     .solutions-grid,
-    .industry-grid {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-    }
-}
-
-/* ----------------------------------------------------
-   PRODUCTS PAGE (products.html)
----------------------------------------------------- */
-
-@media (max-width: 768px) {
-
-    .products-header h1 {
-        font-size: 2rem !important;
-        text-align: center !important;
-    }
-
-    .products-intro p {
-        text-align: center !important;
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr !important;
-        gap: 25px !important;
-    }
-
-    .product-card {
-        padding: 20px !important;
-    }
-}
-
-/* ----------------------------------------------------
-   SERVICES PAGE (Services.html)
----------------------------------------------------- */
-
-@media (max-width: 768px) {
-    .services-hero h2 {
-        font-size: 2rem !important;
-    }
-
-    .services-hero p {
-        font-size: 1rem !important;
-    }
-
-    .service-grid-main {
+    .industry-grid,
+    .value-grid,
+    .metrics-grid,
+    .team-grid,
+    .testimonial-grid,
+    .enhanced-testimonials,
+    .leadership-team {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
     }
 
-    .value-grid {
+    .contact-grid,
+    .form-row,
+    .footer-container {
         grid-template-columns: 1fr !important;
     }
 
+    .about-image {
+        float: none !important;
+        width: 100% !important;
+        margin: 0 0 20px 0 !important;
+    }
+
+    /* --- SERVICES PAGE SPECIFIC --- */
     .process-steps {
         flex-direction: column !important;
         gap: 30px !important;
     }
 
-    .step-number {
-        margin-bottom: 10px !important;
-    }
-}
-
-/* ----------------------------------------------------
-   ABOUT PAGE (about.html)
----------------------------------------------------- */
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem !important;
+    .process-steps::before {
+        display: none !important; /* Hide timeline line on mobile */
     }
 
-    .hero p {
-        font-size: 1rem !important;
+    .comparison-table {
+        display: block;
+        overflow-x: auto; /* Enable horizontal scroll for large tables */
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .features-alt {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
+    .comparison-table table {
+        width: 600px; /* Ensure table is wider than container to force scroll */
+    }
+    
+    /* --- PRODUCT PAGE SPECIFIC (CRITICAL FOR LAG) --- */
+    .main-container {
+        grid-template-columns: 1fr !important; /* Forces single column */
     }
 
-    .feature-row {
-        flex-direction: column !important;
-        text-align: center !important;
-    }
-}
-
-/* ----------------------------------------------------
-   UNIQUE PAGE (unique.html)
----------------------------------------------------- */
-
-@media (max-width: 768px) {
-    .success-stories {
-        grid-template-columns: 1fr !important;
+    .filters-sidebar {
+        /* Hide sidebar by default on mobile to simplify layout and speed up load */
+        display: none; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        z-index: 200; 
+        height: 100vh; 
+        width: 300px;
+        max-height: 100vh; /* Override max-height for full screen view */
     }
 
-    .comparison-table th,
-    .comparison-table td {
-        font-size: 0.85rem !important;
-        padding: 10px !important;
-    }
-}
-
-/* ----------------------------------------------------
-   SUPPORT PAGE (support.html)
----------------------------------------------------- */
-
-@media (max-width: 768px) {
-
-    .support-hero-content h1 {
-        font-size: 2rem !important;
+    .filters-sidebar.active {
+        display: block; /* Show when filter button is pressed */
     }
 
-    .support-hero-content p {
-        font-size: 1rem !important;
+    .mobile-filter-btn {
+        display: inline-block !important; /* Show the filter button */
     }
 
-    .support-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .form-container {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr !important;
+    /* Floating elements adjustments */
+    .back-to-top.visible {
+        bottom: 70px !important; 
     }
 }
 
@@ -215,18 +170,33 @@ section, .page-container {
     }
 
     p {
-        font-size: 0.95rem !important;
-    }
-
-    .feature-row img,
-    .service-icon-main {
-        width: 60px !important;
-        height: 60px !important;
+        font-size: 0.9rem !important;
     }
 
     .floating-support,
     .back-to-top {
         bottom: 15px !important;
         right: 15px !important;
+    }
+
+    .back-to-top.visible {
+        bottom: 60px !important;
+    }
+
+    .floating-support.active + .back-to-top.visible {
+        bottom: 180px !important; /* Adjust for open support menu */
+    }
+    
+    .btn-full, .brochure-download .btn-download {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    
+    .hero-stat-number {
+        font-size: 1.8rem !important;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem !important;
     }
 }
