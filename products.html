@@ -700,7 +700,6 @@
             font-size: 0.85rem;
             color: #889aad;
         }
-
         .floating-support {
             position: fixed;
             bottom: 30px;
@@ -898,9 +897,7 @@
     <div class="main-container">
 
         <!-- Sidebar Filters -->
-        <div class="filter-btn" onclick="openSidebar()">Filters</div>
         <aside class="filters-sidebar" id="filterSidebar">
-            
             <div class="filter-header">
                 <h3><i class="fas fa-filter"></i> Filters</h3>
                 <button class="btn-outline" style="padding: 5px 10px; font-size: 0.8rem;"
@@ -1023,7 +1020,7 @@
                         solutions
                         (MPS) across India.</b>
                 </p>
-
+               
             </div>
 
             <div class="footer-column footer-links">
@@ -1409,57 +1406,38 @@
             }
         }
         // Floating Support Toggle Logic
-        const floatingSupport = document.getElementById('floatingSupport');
-        const supportToggle = document.getElementById('supportToggle');
-        const supportOptions = document.querySelector('.support-options');
-        const backToTopBtn = document.getElementById('backToTop');
+            const floatingSupport = document.getElementById('floatingSupport');
+            const supportToggle = document.getElementById('supportToggle');
+            const supportOptions = document.querySelector('.support-options');
+            const backToTopBtn = document.getElementById('backToTop');
 
-        // Function to handle scroll and set visibility
-        const toggleBackToTop = () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
-        };
+            // Function to handle scroll and set visibility
+            const toggleBackToTop = () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            };
 
-        window.addEventListener('scroll', toggleBackToTop);
+            window.addEventListener('scroll', toggleBackToTop);
 
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-
-        if (supportToggle) {
-            supportToggle.addEventListener('click', () => {
-                const isExpanded = supportToggle.getAttribute('aria-expanded') === 'true';
-                supportToggle.setAttribute('aria-expanded', (!isExpanded).toString());
-                floatingSupport.classList.toggle('active');
-                supportOptions.setAttribute('aria-hidden', isExpanded.toString());
-                toggleBackToTop(); // Recalculate back to top position after options open/close
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
-        }
+
+
+            if (supportToggle) {
+                supportToggle.addEventListener('click', () => {
+                    const isExpanded = supportToggle.getAttribute('aria-expanded') === 'true';
+                    supportToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+                    floatingSupport.classList.toggle('active');
+                    supportOptions.setAttribute('aria-hidden', isExpanded.toString());
+                    toggleBackToTop(); // Recalculate back to top position after options open/close
+                });
+            }
 
         // Initial Render
         renderSections(products);
 
     </script>
-    <div class="sidebar-overlay"></div>
-
-    <script>
-        const sidebar = document.querySelector(".sidebar");
-        const overlay = document.querySelector(".sidebar-overlay");
-
-        function openSidebar() {
-            sidebar.classList.add("active");
-            overlay.classList.add("show");
-        }
-
-        function closeSidebar() {
-            sidebar.classList.remove("active");
-            overlay.classList.remove("show");
-        }
-
-        overlay.addEventListener("click", closeSidebar);
-    </script>
-</body>
