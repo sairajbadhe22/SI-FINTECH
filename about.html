@@ -70,6 +70,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         a {
@@ -1207,8 +1208,13 @@
         }
 
         @media (max-width: 768px) {
+            .header-container {
+                align-items: center;
+            }
+
             .header-content h1 {
                 font-size: 1.5rem;
+                text-align: center;
             }
 
             .logo img {
@@ -1216,7 +1222,26 @@
                 margin-top: 0;
             }
 
+            .header-contact {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            .contact-info {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .contact-info a {
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+
             .nav-container {
+                flex-wrap: nowrap;
+                overflow-x: auto;
                 gap: 20px;
             }
 
@@ -1264,6 +1289,12 @@
             .brochure-download .btn-download {
                 width: 100%;
                 justify-content: center;
+            }
+
+            .floating-support,
+            .back-to-top {
+                right: 12px;
+                bottom: 16px;
             }
         }
     </style>

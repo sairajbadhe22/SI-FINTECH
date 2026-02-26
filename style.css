@@ -6,6 +6,7 @@
 html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
 }
 
 /* Base element scaling and font smoothing */
@@ -14,6 +15,7 @@ body {
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 /* Make all images responsive, preventing horizontal overflow */
@@ -42,7 +44,24 @@ section, .page-container, .main-container {
     }
 
     .header-contact {
+        width: 100% !important;
         align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    .contact-info,
+    .contact-item {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .contact-info a,
+    .contact-item a {
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
     
     .logo img {
@@ -127,6 +146,14 @@ section, .page-container, .main-container {
     .comparison-table table {
         width: 600px; /* Ensure table is wider than container to force scroll */
     }
+
+    .spec-table {
+        display: block !important;
+        overflow-x: auto !important;
+        white-space: nowrap;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
     
     /* --- PRODUCT PAGE SPECIFIC (CRITICAL FOR LAG) --- */
     .main-container {
@@ -157,6 +184,11 @@ section, .page-container, .main-container {
     .back-to-top.visible {
         bottom: 70px !important; 
     }
+
+    .floating-support,
+    .back-to-top {
+        right: 12px !important;
+    }
 }
 
 /* ----------------------------------------------------
@@ -177,6 +209,10 @@ section, .page-container, .main-container {
     .back-to-top {
         bottom: 15px !important;
         right: 15px !important;
+    }
+
+    .filters-sidebar {
+        width: min(88vw, 320px) !important;
     }
 
     .back-to-top.visible {
